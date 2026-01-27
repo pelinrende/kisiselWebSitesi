@@ -18,12 +18,36 @@
     <div class="container mt-5 pb-5">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                @if ($article->image)
-                    <div class="text-center mb-5">
-                        <img class="rounded shadow-lg img-fluid" src="{{ asset($article->image) }}"
-                            style="max-height: 500px; width: 100%; object-fit: cover;">
-                    </div>
-                @endif
+
+                <div class="text-center mb-5">
+                    @php
+
+                        $categoryName = strtolower($article->category->name ?? '');
+
+                        if (!empty($article->image)) {
+                            $imagePath = $article->image;
+                        } else {
+                            $imagePath = 'assets/images/blog/16.webp';
+
+                            if (str_contains($categoryName, 'think')) {
+                                $imagePath = 'assets/images/banner/letsthink.jpg';
+                            } elseif (str_contains($categoryName, 'error')) {
+                                $imagePath = 'assets/images/banner/error.jpg';
+                            } elseif (str_contains($categoryName, 'delay')) {
+                                $imagePath = 'assets/images/banner/thedelay.png';
+                            } elseif (str_contains($categoryName, 'motivation')) {
+                                $imagePath = 'assets/images/banner/motivasyon.jpg';
+                            } elseif (str_contains($categoryName, 'ai')) {
+                                $imagePath = 'assets/images/banner/ai.jpg';
+                            }
+                        }
+                    @endphp
+
+
+                    <img class="rounded shadow-lg img-fluid" src="{{ asset($imagePath) }}" alt="{{ $article->title }}"
+                        style="max-height: 500px; width: 100%; object-fit: cover;"
+                        onerror="this.src='https://via.placeholder.com/800x500?text=Gorsel+Bulunamadi'">
+                </div>
 
                 <div class="content shadow-sm p-5 bg-white rounded"
                     style="line-height: 2; font-size: 1.15rem; color: #4a5568;">
@@ -31,13 +55,8 @@
                 </div>
 
                 <div class="mt-5 d-flex justify-content-between align-items-center border-top pt-4">
-                    <a href="{{ route('makale.index') }}" class="btn btn-outline-secondary rounded-pill">
+                    <a href="{{ route('makaleler') }}" class="btn btn-outline-secondary rounded-pill">
                         <i class="fas fa-arrow-left mr-2"></i> Geri Dön
-                    </a>
-
-                    <a href="{{ route('makale.edit', $article->id) }}"
-                        class="btn btn-warning rounded-pill px-4 shadow font-weight-bold">
-                        <i class="fas fa-edit mr-2"></i> Bu Makaleyi Düzenle
                     </a>
                 </div>
             </div>

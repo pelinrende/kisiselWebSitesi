@@ -119,7 +119,8 @@
                     <div class="get-quote-area-service-wrapper">
                         <h3 class="title">Have questions?</h3>
                         <p>Call us +1 328 713 349 or click the button below to get in touch</p>
-                        <a href="{{ route('iletisim') }}" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s">
+                        <a href="{{ route('mesaj.sayfasi') }}" class="rts-btn btn-primary wow fadeInUp"
+                            data-wow-delay=".5s">
                             Contact sales
                             <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
                         </a>

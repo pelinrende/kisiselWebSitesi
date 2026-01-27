@@ -1,184 +1,89 @@
 @extends('front.app.webapp')
-@section('webtitle')
-    Articles
-@endsection
+
+@section('webtitle', 'Articles')
+
 @section('webcontent')
-    </header>
-    <div class="career-single-banner-area ptb--70 blog-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="career-page-single-banner blog-page">
-                        <h1 class="title">My Articles</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="rts-blog-area rts-section-gapTop position-relative">
+    <div class="rts-blog-area rts-section-gapTop">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".1s">
-                    <div class="single-blog-area-start border-none ">
-                        <a href="#" class="thumbnail">
-                            <img src="{{ asset('assets/images/banner/letsthink.jpg') }}" alt="blog_iamge">
-                        </a>
-                        <div class="inner-content-area">
-                            <div class="top-area">
-                                <span>Let's Think</span>
-                                <a href="blog-details.html">
-                                    <h3 class="title animated fadeIn"></h3>
-                                </a>
-                                <p class="disc">
-                                    Expectations and Realities
-                                </p>
-                                <div class="bottom-author-area">
-                                    <!-- <img src="assets/images/testimonials/01.png" alt="author">-->
-                                    <div class="author-area-info">
-                                        <h6 class="title">Pelin Rende</h6>
-                                        <span>22 JAN 2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="single-blog-area-start border-none">
-                        <a href="#" class="thumbnail">
-                            <img src="assets/images/banner/error.jpg" alt="blog_iamge">
-                        </a>
-                        <div class="inner-content-area">
-                            <div class="top-area">
-                                <span>
-                                    Errors</span>
-                                <a href="blog-details.html">
-                                    <h3 class="title animated fadeIn"></h3>
-                                </a>
-                                <p class="disc">
-                                    What should we avoid when writing code or creating algorithms?
-                                </p>
-                                <div class="bottom-author-area">
 
-                                    <div class="author-area-info">
-                                        <h6 class="title">Pelin Rende</h6>
-                                        <span>23 JAN 2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="single-blog-area-start border-none">
-                        <a href="#" class="thumbnail">
-                            <img src="assets/images/banner/thedelay.png" alt="blog_iamge">
-                        </a>
-                        <div class="inner-content-area">
-                            <div class="top-area">
-                                <span>To delay</span>
-                                <a href="blog-details.html">
-                                    <h3 class="title animated fadeIn"></h3>
-                                </a>
-                                <p class="disc">
-                                    Why do we keep postponing things?
-                                </p>
-                                <div class="bottom-author-area">
-                                    <div class="author-area-info">
-                                        <h6 class="title">Pelin Rende</h6>
-                                        <span>23 JAN 2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".1s">
-                    <div class="single-blog-area-start border-none ">
-                        <a href="blog-details.html" class="thumbnail">
-                            <img src="assets/images/banner/motivasyon.jpg" alt="blog_iamge">
-                        </a>
-                        <div class="inner-content-area">
-                            <div class="top-area">
-                                <span>
-                                    motivation</span>
-                                <a href="blog-details.html">
-                                    <h3 class="title animated fadeIn"></h3>
-                                </a>
-                                <p class="disc">
+                @php
+                    $articles = [
+                        [
+                            'title' => 'AI in 2026',
+                            'category' => 'AI',
+                            'content' => 'Yapay zekâ artık hayatımızın her yerinde...',
+                            'date' => '27 Jan 2026',
+                        ],
+                        [
+                            'title' => 'The Delay',
+                            'category' => 'Delay',
+                            'content' => 'Gecikmeler hayatın doğal bir parçasıdır...',
+                            'date' => '26 Jan 2026',
+                        ],
+                        [
+                            'title' => 'Motivation in Coding',
+                            'category' => 'Motivation',
+                            'content' => 'Motivasyon her zaman yüksek olmak zorunda değil...',
+                            'date' => '25 Jan 2026',
+                        ],
+                        [
+                            'title' => 'Thinking Clearly',
+                            'category' => 'Think',
+                            'content' => 'Net düşünmek, kararları kolaylaştırır...',
+                            'date' => '24 Jan 2026',
+                        ],
+                        [
+                            'title' => 'Learning from Errors',
+                            'category' => 'Error',
+                            'content' => 'Hatalardan öğrenmek başarı için kritiktir...',
+                            'date' => '23 Jan 2026',
+                        ],
+                    ];
+                @endphp
 
-                                </p>
-                                <div class="bottom-author-area">
-                                    <div class="author-area-info">
-                                        <h6 class="title">Pelin Rende</h6>
-                                        <span>23 JAN 2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="single-blog-area-start border-none">
-                        <a href="blog-details.html" class="thumbnail">
-                            <img src="assets/images/blog/15.webp" alt="blog_iamge">
-                        </a>
-                        <div class="inner-content-area">
-                            <div class="top-area">
-                                <span>
-                                    CV or GPA?</span>
-                                <a href="blog-details.html">
-                                    <h3 class="title animated fadeIn"></h3>
-                                </a>
-                                <p class="disc">
+                @foreach ($articles as $article)
+                    @php
+                        $categoryName = strtolower($article['category']);
+                        $imagePath = 'assets/images/blog/16.webp';
 
-                                </p>
-                                <div class="bottom-author-area">
-                                    <div class="author-area-info">
-                                        <h6 class="title">Pelin Rende</h6>
-                                        <span>22 JAN 2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="single-blog-area-start border-none">
-                        <a href="blog-details.html" class="thumbnail">
-                            <img src="assets/images/blog/16.webp" alt="blog_iamge">
-                        </a>
-                        <div class="inner-content-area">
-                            <div class="top-area">
-                                <span>AI</span>
-                                <a href="{{ route('aı') }}">
-                                    <h3 class="title animated fadeIn"></h3>
+                        if (str_contains($categoryName, 'think')) {
+                            $imagePath = 'assets/images/banner/letsthink.jpg';
+                        } elseif (str_contains($categoryName, 'error')) {
+                            $imagePath = 'assets/images/banner/error.jpg';
+                        } elseif (str_contains($categoryName, 'delay')) {
+                            $imagePath = 'assets/images/banner/thedelay.png';
+                        } elseif (str_contains($categoryName, 'motivation')) {
+                            $imagePath = 'assets/images/banner/motivasyon.jpg';
+                        } elseif (str_contains($categoryName, 'ai')) {
+                            $imagePath = 'assets/images/banner/ai.jpg';
+                        }
+                    @endphp
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="single-blog-area-start border-none">
+                            <a href="#" class="thumbnail">
+                                <img src="{{ asset($imagePath) }}" alt="{{ $article['title'] }}"
+                                    style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px;">
+                            </a>
+                            <div class="inner-content-area mt-3">
+                                <span class="text-primary font-weight-bold text-uppercase" style="font-size: 12px;">
+                                    {{ $article['category'] }}
+                                </span>
+                                <a href="#">
+                                    <h3 class="title mt-2" style="font-size: 1.4rem;">{{ $article['title'] }}</h3>
                                 </a>
-                                <p class="disc">
-                                    Is artificial intelligence taking over us?
-                                </p>
-                                <div class="bottom-author-area">
-                                    <div class="author-area-info">
-                                        <h6 class="title">Pelin Rende</h6>
-                                        <span>22 JAN 2026</span>
-                                    </div>
+                                <p class="disc text-muted">{{ Str::limit(strip_tags($article['content']), 90) }}</p>
+
+                                <div class="author-info mt-3">
+                                    <h6 class="mb-0" style="font-size: 14px;">Pelin Rende</h6>
+                                    <small class="text-muted">{{ $article['date'] }}</small>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row mt--50">
-                <div class="col-lg-12">
-                    <div class="pagination-one">
-                        <ul class=" justify-content-center">
-                            <li><a href="{{ route('makaleler') }}">1</a></li>
-                            <li></li>
-                            <li><a href="{{ route('makaleler2') }}">2</a></li>
-                            <!--<li><button class="next-page"><i class="fa-solid fa-chevrons-right"></i></li>-->
-                        </ul>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </div>

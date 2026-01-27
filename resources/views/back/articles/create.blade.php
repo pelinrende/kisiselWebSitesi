@@ -9,7 +9,7 @@
 
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800 font-weight-bold">✨ Yeni Bir Hikaye Yaz</h1>
-                    <a href="{{ url('/panel') }}" class="btn btn-light btn-sm rounded-pill shadow-sm px-3">
+                    <a href="{{ route('dashboard') }}" class="btn btn-light btn-sm rounded-pill shadow-sm px-3">
                         <i class="fas fa-arrow-left mr-1"></i> Panele Dön
                     </a>
                 </div>
@@ -56,7 +56,16 @@
                                     style="border-radius: 1.5rem; background: linear-gradient(45deg, #4e73df, #224abe); border: none;">
                                     <i class="fas fa-paper-plane mr-2"></i> Makaleyi Yayınla
                                 </button>
-                            </div>
+                                <div class="buttons">
+                                    <a href="{{ route('makale.index') }}"
+                                        class="btn btn-primary px-5 py-3 shadow-lg font-weight-bold"
+                                        style="border-radius: 1.5rem; background: linear-gradient(45deg, #4e73df, #224abe); border: none;">
+                                        <i class="fas fa-paper-plane mr-2"></i> Makaleleri Düzenle
+                                    </a>
+
+
+
+                                </div>
                         </form>
                     </div>
                 </div>
@@ -69,7 +78,6 @@
     </div>
 
     <style>
-        /* Hover Efektleri */
         .form-control:focus {
             background: #fff !important;
             box-shadow: 0 0 15px rgba(78, 115, 223, 0.2) !important;

@@ -83,15 +83,30 @@ public function thedelay()
     }
     public function Dashboard()
 {
-    $messageCount = Message::count();
-    $articleCount = Article::count();
+    $messageCount = \App\Models\Message::count();
+    $articleCount = \App\Models\Article::count();
+    $totalHit = \App\Models\Article::sum('hit') ?? 0;
+    $categories = \App\Models\Category::withCount('articles')->get();
+    $catLabels = $categories->pluck('name');
+    $catCounts = $categories->pluck('articles_count');
+    $visitorLabels = [];
+    $visitorData = [];
+    for ($i = 6; $i >= 0; $i--) {
+        $date = now()->subDays($i);
+        $visitorLabels[] = $date->format('D');
+        $visitorData[] = \App\Models\Article::whereDate('updated_at', $date)->sum('hit') ?? 0;
+    }
 
-    $latestArticles = Article::latest()->take(5)->get();
+    $categories = \App\Models\Category::withCount('articles')->get();
+    $catLabels = $categories->pluck('name');
+    $catCounts = $categories->pluck('articles_count');
+
+    $latestArticles = \App\Models\Article::latest()->take(5)->get();
 
     return view('dashboard', compact(
-        'messageCount',
-        'articleCount',
-        'latestArticles'
+        'messageCount', 'articleCount', 'totalHit',
+        'latestArticles', 'visitorLabels', 'visitorData',
+        'catLabels', 'catCounts'
     ));
 }
 
@@ -133,7 +148,6 @@ public function ReplyMessage(Request $request, $id) {
 
 public function IndexArticle()
     {
-        // Kategori isimlerini ID yerine görmek için 'category' ilişkisini çekiyoruz
         $articles = Article::with('category')->get();
         return view('back.articles.index', compact('articles'));
     }
@@ -181,31 +195,29 @@ public function StoreArticle(Request $request)
 
     $categories = \App\Models\Category::all();
 
-    // 3. Dosya yolun tam olarak burası mı? (back/articles/edit.blade.php)
+
     return view('panel.articles.edit', compact('article', 'categories'));
 }
 public function UpdateArticle(Request $request, $id)
 {
-    $request->validate([
-        'title' => 'required',
-        'content' => 'required',
-        'category_id' => 'required',
-        'status' => 'required'
-    ]);
-
     $article = Article::findOrFail($id);
+    $data = $request->all();
+    $data['slug'] = Str::slug($request->title);
 
-    $article->update([
-        'title' => $request->title,
-        'slug' => Str::slug($request->title),
-        'content' => $request->content,
-        'category_id' => $request->category_id,
-        'status' => $request->status,
-    ]);
+    if (!$request->hasFile('image')) {
+        $data['image'] = $article->image;
+    } else {
 
-    return redirect()
-        ->route('makale.index')
-        ->with('success', 'Makale güncellendi');
+    }
+
+    $article->update($data);
+    return redirect()->route('makale.index')->with('success', 'Güncellendi!');
+}
+public function ShowArticleById($id)
+{
+    $article = Article::findOrFail($id);
+    $article->increment('hit');
+    return view('front.articles.show', compact('article'));
 }
 }
 

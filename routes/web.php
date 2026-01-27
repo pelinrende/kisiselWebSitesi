@@ -7,7 +7,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\ArticleController;
 
-// --- 1. HERKESE AÇIK (ÖN YÜZ) ROTALAR ---
+// HERKESE AÇIK ROTALAR
 Route::get('/', [PageController::class, 'WebAnaSayfa'])->name('webanasayfa');
 Route::get('/makaleler', [PageController::class, 'Makaleler'])->name('makaleler');
 Route::get('/makaleler2', [PageController::class, 'Makaleler2'])->name('makaleler2');
@@ -15,7 +15,6 @@ Route::get('/thedelay', [PageController::class, 'thedelay'])->name('thedelay');
 Route::get('/error', [PageController::class, 'error'])->name('error');
 Route::get('/lets-think', [PageController::class, 'letsthink'])->name('letsthink');
 Route::get('/aı', [PageController::class, 'aı'])->name('aı');
-
 
 Route::get('/hakkimda', [PageController::class, 'Hakkimda'])->name('hakkimda');
 Route::get('/iletisim', [PageController::class, 'Iletisim'])->name('iletisim');
@@ -28,7 +27,7 @@ Route::get('/articles', [ArticleController::class, 'index'])->name('articles');
 Route::get('/article/{slug}', [ArticleController::class, 'show'])->name('article.show');
 
 
-// --- 2. MİSAFİR ROTALARI (Giriş Yapmamışlar İçin) ---
+//MİSAFİR ROTALARI
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
     Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('admin.login.post');
@@ -36,7 +35,7 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [RegisteredUserController::class, 'store']);
 });
 
-// --- 3. PANEL ROTALARI (Sadece Giriş Yapmışlar İçin) ---
+//PANEL ROTALARI
 Route::middleware(['auth', 'verified'])->group(function () {
 
     // Dashboard
@@ -51,18 +50,18 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/panel/makaleler', [PageController::class, 'IndexArticle'])
         ->name('makale.index');
     // Düzenleme sayfası
-// Bu satırın web.php içinde olduğundan emin ol:
 Route::get('/panel/makale-duzenle/{id}', [PageController::class, 'EditArticle'])->name('makale.edit');
     // Güncelleme
 Route::put('/panel/makale-guncelle/{id}', [PageController::class, 'UpdateArticle'])->name('makale.update');
 });
 
 Route::middleware(['auth'])->group(function () {
-    // Makale Listesi (Index)
+    // Makale Listesi
     Route::get('/panel/makaleler', [PageController::class, 'IndexArticle'])->name('makale.index');
 
-    // Yeni Makale Ekleme Sayfası (Create)
+    // Yeni Makale Ekleme Sayfası
     Route::get('/panel/makale-ekle', [PageController::class, 'CreateArticle'])->name('makale.ekle');
+    Route::get('/panel/makale-goruntule/{id}', [PageController::class, 'ShowArticleById'])->name('makale.show');
 });
 
 
@@ -70,6 +69,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/panel/mesajlar', [PageController::class, 'ShowMessages'])->name('panel.mesajlar');
     Route::post('/panel/mesaj-cevapla/{id}', [PageController::class, 'ReplyMessage'])->name('mesaj.cevapla');
 });
-// Eğer rotan şu şekildeyse:
 Route::post('/panel/makale-ekle', [PageController::class, 'StoreArticle'])->name('makaleler.store');
 Route::post('/panel/makale-kaydet', [PageController::class, 'StoreArticle'])->name('makale.store');

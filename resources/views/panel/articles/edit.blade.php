@@ -1,99 +1,104 @@
-<x-app-layout>
-    <style>
-        .creative-card {
-            border-radius: 2rem !important;
-            border: none !important;
-            background: #fff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
-        }
+@extends('back.layouts.master')
 
-        .form-control {
-            border-radius: 1rem;
-            padding: 0.8rem 1.2rem;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s;
-        }
+@section('title', 'Makaleyi Güncelle')
 
-        .form-control:focus {
-            border-color: #4e73df;
-            box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.1);
-        }
-
-        .gradient-btn {
-            background: linear-gradient(45deg, #4e73df, #224abe);
-            border: none;
-            border-radius: 1rem;
-            padding: 0.8rem 2rem;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .gradient-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(78, 115, 223, 0.3);
-        }
-    </style>
-
-    <div class="container-fluid py-5 bg-light" style="min-height: 100vh;">
+@section('content')
+    <div class="container-fluid py-5" style="background: #f8f9fc; min-height: 100vh;">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="d-flex align-items-center justify-content-between mb-4 px-2">
-                    <h1 class="h3 mb-0 text-gray-800 font-weight-bold">
-                        <i class="fas fa-edit text-primary mr-2"></i> Makaleyi Düzenle
-                    </h1>
-                    <a href="{{ route('makale.index') }}" class="btn btn-outline-secondary rounded-pill px-4">
-                        <i class="fas fa-arrow-left mr-2"></i> Listeye Dön
+            <div class="col-lg-10">
+
+
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800 font-weight-bold">✍️ "{{ $article->title }}" Düzenleniyor</h1>
+                    <a href="{{ route('makale.index') }}" class="btn btn-light btn-sm rounded-pill shadow-sm px-4">
+                        <i class="fas fa-arrow-left mr-1"></i> Listeye Dön
                     </a>
                 </div>
 
-                <div class="card creative-card p-5">
-                    <form action="{{ route('makale.update', $article->id) }}" method="POST">
-                        @csrf
-                        @method('PUT') {{-- Güncelleme için Laravel bunu bekler --}}
+                <div class="card shadow-lg border-0" style="border-radius: 2rem; overflow: hidden;">
+                    <div class="card-body p-5">
+                        <form action="{{ route('makale.update', $article->id) }}" method="POST">
+                            @csrf
+                            @method('PUT')
 
-                        <div class="row">
-                            <div class="col-md-12 mb-4">
-                                <label class="form-label font-weight-bold text-gray-700">Makale Başlığı</label>
-                                <input type="text" name="title" value="{{ $article->title }}" class="form-control"
-                                    placeholder="Etkileyici bir başlık yazın...">
-                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group mb-4">
+                                        <label class="font-weight-bold text-dark ml-1">Makale Başlığı</label>
+                                        <input type="text" name="title" value="{{ $article->title }}"
+                                            class="form-control border-0 shadow-sm bg-light rounded-pill px-4"
+                                            style="height: 50px;" required>
+                                    </div>
 
-                            <div class="col-md-6 mb-4">
-                                <label class="form-label font-weight-bold text-gray-700">Kategori</label>
-                                <select name="category_id" class="form-control">
-                                    @foreach ($categories as $cat)
-                                        <option value="{{ $cat->id }}"
-                                            {{ $article->category_id == $cat->id ? 'selected' : '' }}>
-                                            {{ $cat->name }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
+                                    <div class="form-group mb-4">
+                                        <label class="font-weight-bold text-dark ml-1">Kategori</label>
+                                        <select name="category_id"
+                                            class="form-control border-0 shadow-sm bg-light rounded-pill px-4"
+                                            style="height: 50px; appearance: none;" required>
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}"
+                                                    {{ $article->category_id == $category->id ? 'selected' : '' }}>
+                                                    {{ $category->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
 
-                            <div class="col-md-6 mb-4">
-                                <label class="form-label font-weight-bold text-gray-700">Yayın Durumu</label>
-                                <select name="status" class="form-control">
-                                    <option value="1" {{ $article->status == 1 ? 'selected' : '' }}>✅ Yayında /
-                                        Aktif</option>
-                                    <option value="0" {{ $article->status == 0 ? 'selected' : '' }}>❌ Pasif /
-                                        Taslak</option>
-                                </select>
-                            </div>
+                                    <div class="form-group mb-4">
+                                        <label class="font-weight-bold text-dark ml-1 d-block">Yayın Durumu</label>
+                                        <div class="custom-control custom-switch mt-2 ml-1">
+                                            <input type="checkbox" name="status" class="custom-control-input"
+                                                id="statusSwitch" value="1"
+                                                {{ $article->status == 1 ? 'checked' : '' }}>
+                                            <label class="custom-control-label font-weight-medium" for="statusSwitch">Sitede
+                                                Aktif Olsun</label>
+                                        </div>
+                                    </div>
 
-                            <div class="col-md-12 mb-4">
-                                <label class="form-label font-weight-bold text-gray-700">Makale İçeriği</label>
-                                <textarea name="content" rows="10" class="form-control" placeholder="Düşüncelerinizi buraya dökün...">{{ $article->content }}</textarea>
-                            </div>
 
-                            <div class="col-md-12 text-right mt-3">
-                                <button type="submit" class="btn gradient-btn text-white shadow-lg">
-                                    <i class="fas fa-save mr-2"></i> Değişiklikleri Kaydet
-                                </button>
+                                    <div class="alert alert-info border-0 shadow-sm mt-5" style="border-radius: 1rem;">
+                                        <small><i class="fas fa-info-circle mr-1"></i> Bu makale en son
+                                            <b>{{ $article->updated_at->diffForHumans() }}</b> güncellendi.</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-8">
+                                    <div class="form-group mb-4">
+                                        <label class="font-weight-bold text-dark ml-1">Makale İçeriği</label>
+                                        <textarea name="content" class="form-control border-0 shadow-sm bg-light p-4" rows="15"
+                                            style="border-radius: 1.5rem; line-height: 1.6;">{{ $article->content }}</textarea>
+                                    </div>
+
+                                    <div class="text-right mt-4">
+                                        <button type="submit"
+                                            class="btn btn-primary px-5 py-3 shadow-lg font-weight-bold rounded-pill"
+                                            style="background: linear-gradient(45deg, #4e73df, #224abe); border: none;">
+                                            <i class="fas fa-save mr-2"></i> Değişiklikleri Uygula
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
+
+                <p class="text-center mt-4 text-muted small">
+                    "Hatalar seni geliştirir."
+                </p>
             </div>
         </div>
     </div>
-</x-app-layout>
+
+    <style>
+        .form-control:focus {
+            background: #fff !important;
+            box-shadow: 0 5px 15px rgba(78, 115, 223, 0.1) !important;
+            transition: 0.3s;
+        }
+
+        .custom-control-input:checked~.custom-control-label::before {
+            border-color: #4e73df;
+            background-color: #4e73df;
+        }
+    </style>
+@endsection

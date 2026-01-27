@@ -1,6 +1,22 @@
 <x-app-layout>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <script>
+        new Chart(document.getElementById('categoryChart'), {
+            type: 'doughnut',
+            data: {
+                labels: {!! json_encode($catLabels) !!},
+                datasets: [{
+                    data: {!! json_encode($catCounts) !!},
+                    backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
     <style>
         .creative-card {
             border-radius: 2rem !important;
@@ -38,17 +54,18 @@
         {{-- HEADER --}}
         <div class="d-flex align-items-center justify-content-between mb-5 px-4">
             <div>
-                <h1 class="h2 mb-0 text-gray-800 font-weight-bold">Kreatif Analiz Paneli</h1>
+                <h1 class="h2 mb-0 text-gray-800 font-weight-bold">Analiz Paneli</h1>
                 <p class="text-muted">Hoş geldin Pelin, bugün verilerin harika görünüyor! ✨</p>
             </div>
             <div class="text-right">
-                <a href="{{ route('makale.create') }}" class="btn btn-primary btn-lg rounded-pill shadow-lg px-4">
+                <a href="{{ route('makale.create') }}" class="btn btn-lg rounded-pill shadow-lg px-4 text-white"
+                    style="background: linear-gradient(45deg, #ff416c, #ff4b2b); border-radius: 8px; transition: 0.3s;">
                     <i class="fas fa-plus mr-2"></i> Yeni İçerik
                 </a>
             </div>
         </div>
 
-        {{-- GRAFİKLER --}}
+
         <div class="row px-3">
             <div class="col-xl-4 col-lg-5">
                 <div class="card creative-card shadow mb-4 p-4">
@@ -69,7 +86,7 @@
             </div>
         </div>
 
-        {{-- KARTLAR --}}
+
         <div class="row px-3 mt-4">
             <div class="col-md-4">
                 <div class="card creative-card p-4 mb-4">
@@ -79,7 +96,9 @@
                         </div>
                         <div>
                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Toplam Okunma</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">1.240</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                {{ number_format($totalHit) }}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,14 +146,12 @@
             </div>
         </div>
 
-        {{-- 🔽 SON YAZILAN MAKALELER (EKLENEN KISIM) --}}
         <div class="row px-3 mt-5">
             <div class="col-12">
                 <div class="card creative-card p-4">
                     <h5 class="font-weight-bold text-primary mb-4">
                         📝 Son Yazılan Makaleler
                     </h5>
-
                     @forelse ($latestArticles as $article)
                         <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
                             <div>
@@ -157,10 +174,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-    {{-- CHART JS --}}
     <script>
         new Chart(document.getElementById('categoryChart'), {
             type: 'doughnut',
