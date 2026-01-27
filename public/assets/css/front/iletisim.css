@@ -1,0 +1,60 @@
+.iletisim-kart {
+            /*background-color: #000000;*/
+            padding: 40px;
+            border-radius: 30px;
+            width: 450px;
+            margin: 100px auto 40px auto;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(177, 146, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+        .iletisim-kart h1 {
+            margin-bottom: 40px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .iletisim-kart table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .iletisim-kart td {
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+
+        }
+
+        .iletisim-kart .etiket {
+            text-align: left;
+            font-weight: bold;
+            color: #b192ff;
+            /* Logondaki mor tonuna yakın */
+        }
+
+        .iletisim-kart .icerik {
+            text-align: right;
+        }
+
+        .iletisim-kart .icerik a {
+
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .iletisim-kart .icerik a:hover {
+            color: #b192ff;
+            text-shadow: 0 0 10px #b192ff;
+        }
+
+        .donus-linki {
+            color: blue;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
