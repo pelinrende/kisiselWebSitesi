@@ -35,12 +35,10 @@ class PageController extends Controller
 
      public function Makaleler()
     {
-        $articles = Article::where('status', 1)
-            ->latest()
-            ->get();
-
+        $articles = Article::latest()->get();
         return view('front.articles.index', compact('articles'));
     }
+
     public function ArticleShow($slug)
     {
         $article = Article::where('slug', $slug)
@@ -166,25 +164,21 @@ public function CreateArticle()
 
         return "Hata: resources/views/back/articles/create.blade.php dosyasını bulamıyorum!";
     }
+    public function StoreArticle(Request $request)
+{
+    // ... validate kısmı aynı kalsın
+    Article::create([
+        'title' => $request->title,
+        'category_id' => $request->category_id,
+        'content' => $request->content,
+        'slug' => Str::slug($request->title),
+        'status' => 1, // Bunu ekle ki makale doğrudan aktif olsun!
+        'image' => null
+    ]);
+    return redirect()->route('makale.index')->with('success', '✨ Makalen yayınlandı!');
+}
 
-public function StoreArticle(Request $request)
-    {
-        $request->validate([
-            'title' => 'required|max:255',
-            'category_id' => 'required',
-            'content' => 'required',
-        ]);
 
-        Article::create([
-            'title' => $request->title,
-            'category_id' => $request->category_id,
-            'content' => $request->content,
-            'slug' => Str::slug($request->title),
-            'image' => null
-        ]);
-
-        return redirect()->route('makale.index')->with('success', 'Harika! Makalen başarıyla yayınlandı. ✨');
-    }
     public function EditArticle($id)
 {
 

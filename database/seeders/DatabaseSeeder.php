@@ -15,11 +15,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+    // 1. Önce Kategorilerini Oluştur (İstediğin isimlerle)
+    $categories = [
+        ['name' => 'Thedelay', 'slug' => 'thedelay'],
+        ['name' => 'Error', 'slug' => 'error'],
+        ['name' => 'AI', 'slug' => 'ai'],
+        ['name' => 'Let\'s Think', 'slug' => 'lets-think'],
+        ['name' => 'CvOrGpa', 'slug' => 'CvOrGpa'],
+        ['name' => 'Motivation', 'slug' => 'motivation']
+    ];
+    foreach ($categories as $cat) {
+        \App\Models\Category::create($cat);
     }
+
+}
 }

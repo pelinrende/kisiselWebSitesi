@@ -18,7 +18,7 @@
                                         <label class="font-weight-bold">Proje Adı</label>
                                         <input type="text" name="title"
                                             class="form-control rounded-pill border-0 bg-light px-4" style="height: 50px;"
-                                            placeholder="Örn: Sürücü Yorgunluk Tespiti" required>
+                                            placeholder="..." required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -26,7 +26,7 @@
                                         <label class="font-weight-bold">Github / Demo Linki</label>
                                         <input type="url" name="link"
                                             class="form-control rounded-pill border-0 bg-light px-4" style="height: 50px;"
-                                            placeholder="https://github.com/pelinrende/...">
+                                            placeholder="...">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -37,7 +37,7 @@
                                     <div class="form-group mb-4">
                                         <label class="font-weight-bold">Proje Detayları</label>
                                         <textarea name="content" class="form-control border-0 bg-light p-4" rows="8" style="border-radius: 1.5rem;"
-                                            placeholder="Proje amacını ve kullandığın teknolojileri (Python, MediaPipe vb.) buraya yaz..."></textarea>
+                                            placeholder="..."></textarea>
                                     </div>
                                 </div>
                             </div>
