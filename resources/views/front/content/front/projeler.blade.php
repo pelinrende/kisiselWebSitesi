@@ -28,72 +28,20 @@
     </div>
     <!-- rts service banner area end -->
 
-    <!-- service-we-provice-area start -->
-    <div class="rts-service-provide-area rts-section-gap">
-        <div class="container-s-float">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="single-service-list wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s">
-                        <div class="icon">
-                            <img src="assets/images/service/icons/42.svg" alt="service">
-                        </div>
-                        <div class="main-information-area">
-                            <h3 class="title">SafeDrive</h3>
-                            <p class="disc">
-                                AI-Powered Real-Time Driver Drowsiness Detection and Audible Warning System
-                            </p>
-                        </div>
-                        <a href="#" class="arrow-btn">
-                            <img src="assets/images/service/icons/13.svg" alt="service">
-                        </a>
-                    </div>
-                    <div class="single-service-list wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s">
-                        <div class="icon">
-                            <img src="assets/images/service/icons/43.svg" alt="service">
-                        </div>
-                        <div class="main-information-area">
-                            <h3 class="title">Notify</h3>
-                            <p class="disc">
-                                ---
-                            </p>
-                        </div>
-                        <a href="#" class="arrow-btn">
-                            <img src="assets/images/service/icons/13.svg" alt="service">
-                        </a>
-                    </div>
-                    <div class="single-service-list wow fadeInUp" data-wow-offset="120" data-wow-delay=".6s">
-                        <div class="icon">
-                            <img src="assets/images/service/icons/44.svg" alt="service">
-                        </div>
-                        <div class="main-information-area">
-                            <h3 class="title">PlanMe</h3>
-                            <p class="disc">
-                                ----
-                            </p>
-                        </div>
-                        <a href="#" class="arrow-btn">
-                            <img src="assets/images/service/icons/13.svg" alt="service">
-                        </a>
-                    </div>
-                    <div class="single-service-list wow fadeInUp" data-wow-offset="120" data-wow-delay=".8s">
-                        <div class="icon">
-                            <img src="assets/images/service/icons/45.svg" alt="service">
-                        </div>
-                        <div class="main-information-area">
-                            <h3 class="title">Restaurant-project</h3>
-                            <p class="disc">
-                                ----
-                            </p>
-                        </div>
-                        <a href="#" class="arrow-btn">
-                            <img src="assets/images/service/icons/13.svg" alt="service">
-                        </a>
-                    </div>
-                </div>
+    @foreach ($projects as $project)
+        <div class="single-service-list">
+            <div class="icon">
+                <img src="{{ asset($project->image) }}" alt="service">
             </div>
+            <div class="main-information-area">
+                <h3 class="title">{{ $project->title }}</h3>
+                <p class="disc">{{ $project->content }}</p>
+            </div>
+            <a href="{{ $project->link }}" class="arrow-btn">
+                <img src="assets/images/service/icons/13.svg" alt="service">
+            </a>
         </div>
-    </div>
-    <!-- service-we-provice-area end -->
+    @endforeach
 
     <!-- large iamge area start -->
     <div class="large-image-area-bg-service-page jarallax rts-section-gap"
@@ -118,7 +66,7 @@
                 <div class="col-lg-12">
                     <div class="get-quote-area-service-wrapper">
                         <h3 class="title">Have questions?</h3>
-                        <p>Call us +1 328 713 349 or click the button below to get in touch</p>
+                        <p>Call us +90 534 365 6222 or click the button below to get in touch</p>
                         <a href="{{ route('mesaj.sayfasi') }}" class="rts-btn btn-primary wow fadeInUp"
                             data-wow-delay=".5s">
                             Contact sales

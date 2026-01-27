@@ -146,14 +146,14 @@
             </div>
         </div>
 
-        <div class="row px-3 mt-5">
+        <!--     <div class="row px-3 mt-5">
             <div class="col-12">
                 <div class="card creative-card p-4">
                     <h5 class="font-weight-bold text-primary mb-4">
                         📝 Son Yazılan Makaleler
                     </h5>
                     @forelse ($latestArticles as $article)
-                        <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+<div class="d-flex justify-content-between align-items-center py-3 border-bottom">
                             <div>
                                 <div class="font-weight-bold text-dark">
                                     {{ $article->title }}
@@ -168,32 +168,55 @@
                                 Görüntüle
                             </a>
                         </div>
-                    @empty
+@empty
                         <p class="text-muted">Henüz makale yok.</p>
-                    @endforelse
+@endforelse
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        new Chart(document.getElementById('categoryChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['AI', 'Motivation', 'Error', 'The Delay'],
-                datasets: [{
-                    data: [30, 45, 15, 10],
-                }]
-            }
-        });
+-->
+        <div class="col-md-3">
+            <a href="{{ route('projects.index') }}" class="text-decoration-none">
+                <div class="card creative-card p-4 mb-4">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-circle bg-warning mr-3">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Projelerim
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    {{ $projectCount }}
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-300"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <script>
+            new Chart(document.getElementById('categoryChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['AI', 'Motivation', 'Error', 'The Delay'],
+                    datasets: [{
+                        data: [30, 45, 15, 10],
+                    }]
+                }
+            });
 
-        new Chart(document.getElementById('visitorLineChart'), {
-            type: 'line',
-            data: {
-                labels: ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
-                datasets: [{
-                    data: [100, 250, 200, 450, 380, 500, 600],
-                }]
-            }
-        });
-    </script>
+            new Chart(document.getElementById('visitorLineChart'), {
+                type: 'line',
+                data: {
+                    labels: ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+                    datasets: [{
+                        data: [100, 250, 200, 450, 380, 500, 600],
+                    }]
+                }
+            });
+        </script>
 </x-app-layout>

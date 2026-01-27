@@ -1,4 +1,4 @@
-@extends('front.app.webapp')
+{{-- @extends('front.app.webapp')
 @section('webtitle')
     Let's think
 @endsection
@@ -73,4 +73,4 @@
                 </div>
             </div>
         </div>
-    @endsection
+    @endsection --}}

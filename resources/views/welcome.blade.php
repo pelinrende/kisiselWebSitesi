@@ -92,159 +92,34 @@
     </div>
     <!-- large video area end -->
 
-    <!-- commercial faq area
-                                                                                                                                                                                                    <div class="professional-faq-area rts-section-gap position-relative">
-                                                                                                                                                                                                        <div class="shape-top">
-                                                                                                                                                                                                            <img loading="lazy" rel="preload" src="assets/images/video/shape/01.png" alt="" class="wow move-right"
-                                                                                                                                                                                                                data-wow-offset="120">
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                        <div class="container">
-                                                                                                                                                                                                            <div class="row">
-                                                                                                                                                                                                                <div class="col-lg-12">
-                                                                                                                                                                                                                    <div class="text-center-title-bg-white">
-                                                                                                                                                                                                                        <h2 class="title" style="font-size: 40px;">Common questions</h2>
-                                                                                                                                                                                                                        <p>Offers a unified platform that fosters innovation while providing end-to-end data management.
-                                                                                                                                                                                                                            See how we help your team solve today’s biggest challenges.</p>
-                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                            <div class="row mt--80">
-                                                                                                                                                                                                                <div class="col-lg-12">
-                                                                                                                                                                                                                    <div class="accordion-container-one">
-                                                                                                                                                                                                                        <div class="accordion" id="accordionExample">
-                                                                                                                                                                                                                            <div class="accordion-item">
-                                                                                                                                                                                                                                <h2 class="accordion-header">
-                                                                                                                                                                                                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                                                                                                                                                                                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                                                                                                                                                                                                        How long has Luminous been in business?
-                                                                                                                                                                                                                                    </button>
-                                                                                                                                                                                                                                </h2>
-                                                                                                                                                                                                                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                                                                                                                                                                                                                    data-bs-parent="#accordionExample">
-                                                                                                                                                                                                                                    <div class="accordion-body">
-                                                                                                                                                                                                                                        Offers a unified platform that fosters innovation while providing end-to-end
-                                                                                                                                                                                                                                        data management. See how we help your team solve today’s biggest challenges.
-                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            <div class="accordion-item">
-                                                                                                                                                                                                                                <h2 class="accordion-header">
-                                                                                                                                                                                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                                                                                                                                                                                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                                                                                                                                                                                                        What types of services does Luminous offer?
-                                                                                                                                                                                                                                    </button>
-                                                                                                                                                                                                                                </h2>
-                                                                                                                                                                                                                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                                                                                                                                                                                                                    data-bs-parent="#accordionExample">
-                                                                                                                                                                                                                                    <div class="accordion-body">
-                                                                                                                                                                                                                                        Offers a unified platform that fosters innovation while providing end-to-end
-                                                                                                                                                                                                                                        data management. See how we help your team solve today’s biggest challenges.
-                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            <div class="accordion-item">
-                                                                                                                                                                                                                                <h2 class="accordion-header">
-                                                                                                                                                                                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                                                                                                                                                                                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                                                                                                                                                                                                                        aria-controls="collapseThree">
-                                                                                                                                                                                                                                        Does Luminous work with small businesses or only large enterprises?
-                                                                                                                                                                                                                                    </button>
-                                                                                                                                                                                                                                </h2>
-                                                                                                                                                                                                                                <div id="collapseThree" class="accordion-collapse collapse"
-                                                                                                                                                                                                                                    data-bs-parent="#accordionExample">
-                                                                                                                                                                                                                                    <div class="accordion-body">
-                                                                                                                                                                                                                                        Offers a unified platform that fosters innovation while providing end-to-end
-                                                                                                                                                                                                                                        data management. See how we help your team solve today’s biggest challenges.
-                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            <div class="accordion-item">
-                                                                                                                                                                                                                                <h2 class="accordion-header">
-                                                                                                                                                                                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                                                                                                                                                                                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                                                                                                                                                                                                                        aria-controls="collapseFour">
-                                                                                                                                                                                                                                        What technologies does Luminous specialize in?
-                                                                                                                                                                                                                                    </button>
-                                                                                                                                                                                                                                </h2>
-                                                                                                                                                                                                                                <div id="collapseFour" class="accordion-collapse collapse"
-                                                                                                                                                                                                                                    data-bs-parent="#accordionExample">
-                                                                                                                                                                                                                                    <div class="accordion-body">
-                                                                                                                                                                                                                                        Offers a unified platform that fosters innovation while providing end-to-end
-                                                                                                                                                                                                                                        data management. See how we help your team solve today’s biggest challenges.
-                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            <div class="accordion-item">
-                                                                                                                                                                                                                                <h2 class="accordion-header">
-                                                                                                                                                                                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                                                                                                                                                                                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                                                                                                                                                                                                                        aria-controls="collapseFive">
-                                                                                                                                                                                                                                        How does Luminous stay up-to-date with the latest technology trends?
-                                                                                                                                                                                                                                    </button>
-                                                                                                                                                                                                                                </h2>
-                                                                                                                                                                                                                                <div id="collapseFive" class="accordion-collapse collapse"
-                                                                                                                                                                                                                                    data-bs-parent="#accordionExample">
-                                                                                                                                                                                                                                    <div class="accordion-body">
-                                                                                                                                                                                                                                        Offers a unified platform that fosters innovation while providing end-to-end
-                                                                                                                                                                                                                                        data management. See how we help your team solve today’s biggest challenges.
-                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            <div class="accordion-item">
-                                                                                                                                                                                                                                <h2 class="accordion-header">
-                                                                                                                                                                                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                                                                                                                                                                                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                                                                                                                                                                                                                        How do I get started with Luminous?
-                                                                                                                                                                                                                                    </button>
-                                                                                                                                                                                                                                </h2>
-                                                                                                                                                                                                                                <div id="collapseSix" class="accordion-collapse collapse"
-                                                                                                                                                                                                                                    data-bs-parent="#accordionExample">
-                                                                                                                                                                                                                                    <div class="accordion-body">
-                                                                                                                                                                                                                                        Offers a unified platform that fosters innovation while providing end-to-end
-                                                                                                                                                                                                                                        data management. See how we help your team solve today’s biggest challenges.
-                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                            <div class="row mt--80">
-                                                                                                                                                                                                                <div class="col-lg-12 text-center">
-                                                                                                                                                                                                                    <p>Still have a question? <a href="free-consultation.html" style="color: var(--color-primary);">Feel
-                                                                                                                                                                                                                            free to ask</a></p>
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                    -->
+    <!-- commercial faq area                                                                                                                                                                                             -->
     <!-- commercial faq area end -->
 
     <!-- rts cta area start -->
-    <div class="rts-cts-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-gl-12">
-                    <div class="cta-one-wrapper">
-                        <div class="shape-area">
-                            <img loading="lazy" rel="preload" src="assets/images/cta/02.png" alt="cta-area">
-                        </div>
-                        <div class="left-area">
-                            <h3 class="title wow fadeInUp" data-wow-delay=".1s">Book a Free Consultation</h3>
-                            <p class="wow fadeInUp" data-wow-delay=".3s">Schedule a no-obligation consultation to
-                                discuss your unique needs and how Luminous can
-                                elevate your business technology.</p>
-                            <a href="contact.html" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s">
-                                Schedule Now
-                                <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
-                            </a>
-                        </div>
-                        <div class="right wow move-out" data-wow-offset="140">
-                            <img loading="lazy" rel="preload" src="assets/images/cta/01.png" alt="">
+    <!--   <div class="rts-cts-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-gl-12">
+                                <div class="cta-one-wrapper">
+                                    <div class="shape-area">
+                                        <img loading="lazy" rel="preload" src="assets/images/cta/02.png" alt="cta-area">
+                                    </div>
+                                    <div class="left-area">
+                                        <h3 class="title wow fadeInUp" data-wow-delay=".1s">Book a Free Consultation</h3>
+                                        <p class="wow fadeInUp" data-wow-delay=".3s">Schedule a no-obligation consultation to
+                                            discuss your unique needs and how Luminous can
+                                            elevate your business technology.</p>
+                                        <a href="contact.html" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s">
+                                            Schedule Now
+                                            <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <div class="right wow move-out" data-wow-offset="140">
+                                        <img loading="lazy" rel="preload" src="assets/images/cta/01.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div>-->
 @endsection

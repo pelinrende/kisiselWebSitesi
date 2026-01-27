@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\ArticleController;
+use App\Http\Controllers\ProjectController;
 
 // HERKESE AÇIK ROTALAR
 Route::get('/', [PageController::class, 'WebAnaSayfa'])->name('webanasayfa');
@@ -54,7 +55,7 @@ Route::get('/panel/makale-duzenle/{id}', [PageController::class, 'EditArticle'])
     // Güncelleme
 Route::put('/panel/makale-guncelle/{id}', [PageController::class, 'UpdateArticle'])->name('makale.update');
 });
-
+Route::resource('projects', ProjectController::class);
 Route::middleware(['auth'])->group(function () {
     // Makale Listesi
     Route::get('/panel/makaleler', [PageController::class, 'IndexArticle'])->name('makale.index');

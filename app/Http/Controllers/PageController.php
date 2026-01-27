@@ -28,7 +28,9 @@ class PageController extends Controller
 
     public function Projeler()
     {
-        return view('front.content.front.projeler');
+    $projects = \App\Models\Project::latest()->get();
+    return view('front.content.front.projeler', compact('projects'));
+
     }
 
      public function Makaleler()
@@ -86,9 +88,9 @@ public function thedelay()
     $messageCount = \App\Models\Message::count();
     $articleCount = \App\Models\Article::count();
     $totalHit = \App\Models\Article::sum('hit') ?? 0;
-    $categories = \App\Models\Category::withCount('articles')->get();
-    $catLabels = $categories->pluck('name');
-    $catCounts = $categories->pluck('articles_count');
+
+    $projectCount = \App\Models\Project::count();
+
     $visitorLabels = [];
     $visitorData = [];
     for ($i = 6; $i >= 0; $i--) {
@@ -104,7 +106,7 @@ public function thedelay()
     $latestArticles = \App\Models\Article::latest()->take(5)->get();
 
     return view('dashboard', compact(
-        'messageCount', 'articleCount', 'totalHit',
+        'messageCount', 'articleCount', 'projectCount', 'totalHit',
         'latestArticles', 'visitorLabels', 'visitorData',
         'catLabels', 'catCounts'
     ));
