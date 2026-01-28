@@ -1,6 +1,6 @@
 <body>
 
-    <header class="header-style-one" style="z-index: 1000; background: #fff; position: relative;">
+    <header class="header-style-one" style="z-index: 1000; background: #3e0e6b; position: relative;">
         <div class="container-fluid" style="padding: 0 40px;">
             <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -17,15 +17,15 @@
                             <nav>
                                 <ul
                                     style="display: flex; gap: 40px; list-style: none; margin: 0; padding: 0; white-space: nowrap;">
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; "
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white; "
                                             href="{{ route('webanasayfa') }}">HomePage</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; "
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600;color: white; "
                                             href="{{ route('hakkimda') }}">About</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; "
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600;color: white; "
                                             href="{{ route('iletisim') }}">Contact</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; "
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
                                             href="{{ route('projeler') }}">Projects</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600;"
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600;color: white;"
                                             href="{{ route('makaleler') }}">Articles</a></li>
                                 </ul>
                             </nav>
@@ -33,7 +33,7 @@
 
                         <div class="button-area-right-header" style="z-index: 10;">
                             <a href="{{ route('mesaj.sayfasi') }}" class="rts-btn btn-border"
-                                style="padding: 16px 35px; border-radius: 5px; font-weight: 700; border: 2px solid #1c1c1c; white-space: nowrap;">
+                                style="padding: 16px 35px; border-radius: 5px; font-weight: 700; border: 2px solid white; white-space: nowrap; color: white;">
                                 Get in touch
                             </a>
                         </div>
@@ -44,7 +44,8 @@
         </div>
     </header>
 
-    <header class="header-style-one header--sticky" style="z-index: 1000; position: fixed; top: 0; width: 100%;">
+    <header class="header-style-one header--sticky"
+        style="z-index: 1000; position: fixed; background: #3e0e6b; top: 0; width: 100%;">
         <div class="container-fluid" style="padding: 0 40px;">
             <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -61,15 +62,15 @@
                             <nav>
                                 <ul
                                     style="display: flex; gap: 40px; list-style: none; margin: 0; padding: 0; white-space: nowrap;">
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; "
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
                                             href="{{ route('webanasayfa') }}">HomePage</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; "
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
                                             href="{{ route('hakkimda') }}">About</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; "
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
                                             href="{{ route('iletisim') }}">Contact</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; "
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
                                             href="{{ route('projeler') }}">Projects</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600;"
+                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600;color: white;"
                                             href="{{ route('makaleler') }}">Articles</a></li>
                                 </ul>
                             </nav>
@@ -77,7 +78,9 @@
 
                         <div class="button-area-right-header" style="z-index: 10;">
                             <a href="{{ route('mesaj.sayfasi') }}" class="rts-btn btn-border"
-                                style="padding: 10px 25px;">Get in touch</a>
+                                style="padding: 16px 35px; border-radius: 5px; font-weight: 700; border: 2px solid white; white-space: nowrap; color: white;">
+                                Get in touch
+                            </a>
                         </div>
                     </div>
                 </div>

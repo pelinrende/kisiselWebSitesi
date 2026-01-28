@@ -1,66 +1,58 @@
 @extends('back.layouts.master')
 
-@section('title', 'Tüm Projelerim')
+@section('title', 'Proje Yönetimi')
 
 @section('content')
     <div class="container-fluid py-4">
-        <div class="card shadow-sm border-0" style="border-radius: 1.5rem;">
-            <div class="card-body p-4">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h3 class="font-weight-bold text-primary">📂 Proje Listesi</h3>
-                    <a href="{{ route('projects.create') }}" class="btn btn-primary rounded-pill px-4 shadow-sm">
-                        <i class="fas fa-plus mr-2"></i> Yeni Proje Ekle
-                    </a>
-                </div>
-
-                @if (session('success'))
-                    <div class="alert alert-success border-0 shadow-sm rounded-pill px-4">
-                        {{ session('success') }}
-                    </div>
-                @endif
-
+        <div class="card shadow-lg border-0" style="border-radius: 1.2rem; background: #f8f9fc;">
+            <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center"
+                style="border-radius: 1.2rem 1.2rem 0 0;">
+                <h4 class="m-0 font-weight-bold text-primary">📂 Yayınlanan Projelerim</h4>
+                <a href="{{ route('projects.create') }}" class="btn btn-primary btn-icon-split rounded-pill shadow-sm">
+                    <span class="icon text-white-50"><i class="fas fa-plus"></i></span>
+                    <span class="text px-3">Yeni Proje Ekle</span>
+                </a>
+            </div>
+            <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover align-middle">
-                        <thead class="thead-light">
+                    <table class="table table-bordered table-hover" width="100%" cellspacing="0"
+                        style="border-radius: 10px; overflow: hidden;">
+                        <thead class="bg-light text-dark">
                             <tr>
-                                <th>Görsel</th>
+                                <th style="width: 80px;">Görsel</th>
                                 <th>Proje Başlığı</th>
                                 <th>Link</th>
-                                <th>Oluşturma Tarihi</th>
+                                <th>Eklenme Tarihi</th>
                                 <th class="text-center">İşlemler</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse($projects as $project)
-                                <tr>
-                                    <td>
-                                        <img src="{{ asset($project->image) }}" width="60" height="40"
-                                            class="rounded shadow-sm" style="object-fit: cover;"
-                                            onerror="this.src='https://via.placeholder.com/60x40?text=Yok'">
-                                    </td>
-                                    <td class="font-weight-bold">{{ $project->title }}</td>
-                                    <td>
-                                        @if ($project->link)
-                                            <a href="{{ $project->link }}" target="_blank"
-                                                class="btn btn-sm btn-outline-info rounded-pill">
-                                                <i class="fas fa-external-link-alt mr-1"></i> Git
-                                            </a>
-                                        @else
-                                            <span class="text-muted">Link yok</span>
-                                        @endif
-                                    </td>
-                                    <td>{{ $project->created_at->format('d.m.Y') }}</td>
+                                <tr class="align-middle">
                                     <td class="text-center">
-                                        <div class="btn-group">
+                                        <img src="{{ asset($project->image) }}" class="img-profile rounded shadow-sm"
+                                            style="width: 60px; height: 45px; object-fit: cover;"
+                                            onerror="this.src='https://via.placeholder.com/60x45?text=Yok'">
+                                    </td>
+                                    <td class="font-weight-bold text-dark">{{ $project->title }}</td>
+                                    <td>
+                                        <a href="{{ $project->link }}" target="_blank"
+                                            class="badge badge-info p-2 px-3 rounded-pill">
+                                            <i class="fas fa-external-link-alt mr-1"></i> Git
+                                        </a>
+                                    </td>
+                                    <td>{{ $project->created_at->format('d M Y') }}</td>
+                                    <td class="text-center">
+                                        <div class="btn-group" role="group">
                                             <a href="{{ route('projects.edit', $project->id) }}"
-                                                class="btn btn-sm btn-light text-primary mr-2 shadow-sm">
+                                                class="btn btn-sm btn-outline-primary mr-2 rounded">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <form action="{{ route('projects.destroy', $project->id) }}" method="POST"
-                                                onsubmit="return confirm('Projeyi silmek istediğine emin misin?')">
+                                                onsubmit="return confirm('Pelin, bu projeyi silmek istediğine emin misin?')">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-sm btn-light text-danger shadow-sm">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger rounded">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </form>
@@ -69,23 +61,17 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="5" class="text-center py-5 text-muted">
-                                        <i class="fas fa-folder-open fa-3x mb-3"></i><br>
-                                        Henüz hiç proje eklememişsin Pelin. Hemen bir tane ekleyelim!
+                                    <td colspan="5" class="text-center py-5">
+                                        <p class="text-muted">Henüz hiç proje eklenmemiş. Hemen bir tane ekleyelim mi?</p>
                                     </td>
                                 </tr>
                             @endforelse
                         </tbody>
                     </table>
-                    <div class="card-footer bg-white border-0 pb-4">
-                        <div class="d-flex justify-content-end">
-                            {{-- Yeni Proje Ekleme Sayfasına Giden Şık Buton --}}
-                            <a href="{{ route('projeler') }}"
-                                class="btn btn-primary px-5 py-3 shadow-lg rounded-pill font-weight-bold">
-                                <i class="fas fa-plus-circle mr-2"></i> Project
-                            </a>
-                        </div>
-                    </div>
+                    <a href="{{ route('projeler') }}" class="btn btn-primary btn-icon-split rounded-pill shadow-sm">
+                        <span class="icon text-white-50"><i class="fas fa-plus"></i></span>
+                        <span class="text px-3">Yayınlanan Projelerim</span>
+                    </a>
                 </div>
             </div>
         </div>

@@ -58,17 +58,15 @@
 
                         <p class="disc">
                             I write in-depth articles on software engineering, share real project experiences, and help
-                            others grow through clear, practical insights.
+                            others grow through clear, practical insights. <br></br>
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-12 mt--70">
-                    <div class="image--large-video jarallax">
-                        <img class="jarallax-img" src="assets/images/video/01.webp" alt="large">
-                        <div class="vedio-icone">
-                            <a href="{{ asset('assets/images/banner/images.png') }}"></a>
-                            <div class="video-overlay">
-                                <a href="#section1" class="video-overlay-close">×</a>
+                <div class="large-image-area-bg-service-page jarallax rts-section-gap"
+                    style="background-image: url('{{ asset('assets/images/service/icons/proje.jpg') }}'); background-size: cover; background-position: center; min-height: 400px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
                             </div>
                         </div>
                     </div>
@@ -97,29 +95,29 @@
 
     <!-- rts cta area start -->
     <!--   <div class="rts-cts-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-gl-12">
-                                <div class="cta-one-wrapper">
-                                    <div class="shape-area">
-                                        <img loading="lazy" rel="preload" src="assets/images/cta/02.png" alt="cta-area">
-                                    </div>
-                                    <div class="left-area">
-                                        <h3 class="title wow fadeInUp" data-wow-delay=".1s">Book a Free Consultation</h3>
-                                        <p class="wow fadeInUp" data-wow-delay=".3s">Schedule a no-obligation consultation to
-                                            discuss your unique needs and how Luminous can
-                                            elevate your business technology.</p>
-                                        <a href="contact.html" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s">
-                                            Schedule Now
-                                            <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
-                                        </a>
-                                    </div>
-                                    <div class="right wow move-out" data-wow-offset="140">
-                                        <img loading="lazy" rel="preload" src="assets/images/cta/01.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-gl-12">
+                                                                                <div class="cta-one-wrapper">
+                                                                                    <div class="shape-area">
+                                                                                        <img loading="lazy" rel="preload" src="assets/images/cta/02.png" alt="cta-area">
+                                                                                    </div>
+                                                                                    <div class="left-area">
+                                                                                        <h3 class="title wow fadeInUp" data-wow-delay=".1s">Book a Free Consultation</h3>
+                                                                                        <p class="wow fadeInUp" data-wow-delay=".3s">Schedule a no-obligation consultation to
+                                                                                            discuss your unique needs and how Luminous can
+                                                                                            elevate your business technology.</p>
+                                                                                        <a href="contact.html" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s">
+                                                                                            Schedule Now
+                                                                                            <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="right wow move-out" data-wow-offset="140">
+                                                                                        <img loading="lazy" rel="preload" src="assets/images/cta/01.png" alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
 @endsection

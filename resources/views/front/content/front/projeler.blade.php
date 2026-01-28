@@ -43,6 +43,7 @@
         </div>
     @endforeach
 
+
     <!-- large iamge area start -->
     <div class="large-image-area-bg-service-page jarallax rts-section-gap"
         style="background-image: url('{{ asset('assets/images/service/icons/proje.jpg') }}'); background-size: cover; background-position: center; min-height: 400px;">

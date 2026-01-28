@@ -1,93 +1,66 @@
 .rts-footer-area {
-    background: #3e0e6b ;
+    background:#3e0e6b;
     position: relative;
     overflow: hidden;
-
+    padding: 80px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 
 .rts-footer-area::before {
     content: "";
     position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(106, 13, 173, 0.25) 0%, rgba(106, 13, 173, 0) 70%);
-    border-radius: 50%;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(40, 19, 83, 0.05), transparent 400px);
+    pointer-events: none;
 }
 
-
-.rts-footer-area::after {
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    right: -50px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(177, 146, 255, 0.15) 0%, rgba(177, 146, 255, 0) 70%);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.rts-footer-area .container {
-    position: relative;
-    z-index: 2;
-}
-.rts-footer-area p,
-.rts-footer-area .disc {
-    color:white;
-}
-
-.rts-copyright-area-one p,
-.rts-copyright-area-one .copyright-wrapper {
-    color: black;
-    font-weight: 500;
-}
-
-
-.social-copyright-area ul li a i {
-    color: black;
-}
-
-/* Logoyu Kapsayıcıdan Bağımsız Büyütme ve Konumlandırma */
-.logo-area {
-    position: relative ;
-    z-index: 999 ;
+.footer-logo-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
 #ozel-yuvarlak-logo {
-    /* Mevcut boyutları zorla değiştiriyoruz */
-    width: 150px ;
-    height: 150px ;
-    max-height: none ;
-
-
-    position: absolute ;
-    top: -25px;
-    left: -60px;
-
-
-    object-fit: contain ;
-    border-radius: 50% ;
-    filter: drop-shadow(0 0 20px rgba(106, 13, 173, 0.7)) ;
-
-
-    transition: transform 0.3s ease-in-out ;
+    position: relative;
+    border-radius: 12px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
 }
-
 
 #ozel-yuvarlak-logo:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
+.footer-text-info .disc {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 ;
+}
 
-@media (max-width: 768px) {
-    #ozel-yuvarlak-logo {
-        width: 80px ;
-        height: 80px ;
-        left: -10px;
-        top: -5px;
-    }
+.footer-text-info .disc-sub {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 5px ;
+}
+
+.rts-copyright-area-one {
+    background: #3e0e6b;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-links li a {
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.footer-links li a:hover {
+    opacity: 1;
+    color: #3b82f6;
 }

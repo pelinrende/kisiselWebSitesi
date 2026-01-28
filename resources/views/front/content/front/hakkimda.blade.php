@@ -8,7 +8,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="banner-thumbnail wow scaleIn" data-wow-delay=".1s" data-wow-duration=".5s">
-                        <img src="assets/images/team/hakkimda.jpg" alt="">
+                        <img src="assets/images/about/About.jpeg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 pl--50 pl_md--15 pl_sm--15 mt_md--30 mt_sm--30">
@@ -27,7 +27,8 @@
                             <p>Follow Me:</p>
                             <div class="social-one-area">
                                 <ul>
-                                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/pelinrende_/"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                                     <li><a href="https://github.com/pelinrende"><i class="fa-brands fa-github"></i></a></li>
                                     <li><a

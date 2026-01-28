@@ -1,11 +1,10 @@
 .iletisim-kart {
-            /*background-color: #000000;*/
             padding: 40px;
             border-radius: 30px;
             width: 450px;
             margin: 100px auto 40px auto;
             text-align: center;
-            box-shadow: 0 0 50px rgba(177, 146, 255, 0.3);
+            box-shadow: 0 0 50px rgba(76, 5, 142, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
 
         }
@@ -31,8 +30,8 @@
         .iletisim-kart .etiket {
             text-align: left;
             font-weight: bold;
-            color: #b192ff;
-            /* Logondaki mor tonuna yakın */
+            color: #3e0e6b;
+
         }
 
         .iletisim-kart .icerik {
@@ -46,8 +45,8 @@
         }
 
         .iletisim-kart .icerik a:hover {
-            color: #b192ff;
-            text-shadow: 0 0 10px #b192ff;
+            color: #3e0e6b;
+            text-shadow: 0 0 10px #3e0e6b
         }
 
         .donus-linki {
@@ -58,3 +57,34 @@
             margin-top: 20px;
             transition: 0.3s;
         }
+
+
+.shape-left-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+.shape-left-right img.left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    max-width: 200px;
+    opacity: 0.6;
+}
+
+
+.shape-left-right img.right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: 200px;
+    opacity: 0.6;
+}

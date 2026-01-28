@@ -215,5 +215,25 @@ public function ShowArticleById($id)
     $article->increment('hit');
     return view('front.articles.show', compact('article'));
 }
+public function EditProject($id)
+{
+
+    $project = \App\Models\Project::findOrFail($id);
+    return view('back.projects.edit', compact('project'));
+}
+public function UpdateProject(Request $request, $id)
+{
+    $project = \App\Models\Project::findOrFail($id);
+    $data = $request->only(['title', 'content', 'link']);
+
+    if ($request->hasFile('image')) {
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('uploads'), $imageName);
+        $data['image'] = 'uploads/'.$imageName;
+    }
+    $project->update($data);
+
+    return redirect()->route('projects.index')->with('success', 'Güncelleme başarılı Pelin! 🚀');
+}
 }
 
