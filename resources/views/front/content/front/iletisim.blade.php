@@ -9,9 +9,8 @@
 
         <div class="container" style="position: relative; z-index: 10;">
             <div class="iletisim-kart"
-                style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); color: white; max-width: 600px; margin: 0 auto;">
+                style="background: rgba(255, 255, 255, 0.907); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; max-width: 600px; margin: 0 auto;">
                 <h1 style="margin-bottom: 30px; font-weight: 700;">Get In Touch</h1>
-
                 <table style="width: 100%; border-collapse: separate; border-spacing: 0 15px;">
                     <tr>
                         <td class="etiket" style="font-weight: 600; width: 30%;">📞 Phone</td>
