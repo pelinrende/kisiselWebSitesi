@@ -25,8 +25,8 @@
                                 alt="banner">
                         </div>
                         <div class="left-image jarallax jara-mask-1" data-speed=".7">
-                            <img loading="lazy" rel="preload" class="jarallax-img" src="assets/images/banner/09.webp"
-                                alt="banner">
+                            <img loading="lazy" rel="preload" class="jarallax-img"
+                                src="assets/images/banner/anasayfa2.jpeg" alt="banner">
                         </div>
                         <div class="shape-image">
                             <img loading="lazy" rel="preload" src="assets/images/banner/shape/01.png" alt="shape"
@@ -95,29 +95,29 @@
 
     <!-- rts cta area start -->
     <!--   <div class="rts-cts-area">
-                                                                    <div class="container">
-                                                                        <div class="row">
-                                                                            <div class="col-gl-12">
-                                                                                <div class="cta-one-wrapper">
-                                                                                    <div class="shape-area">
-                                                                                        <img loading="lazy" rel="preload" src="assets/images/cta/02.png" alt="cta-area">
-                                                                                    </div>
-                                                                                    <div class="left-area">
-                                                                                        <h3 class="title wow fadeInUp" data-wow-delay=".1s">Book a Free Consultation</h3>
-                                                                                        <p class="wow fadeInUp" data-wow-delay=".3s">Schedule a no-obligation consultation to
-                                                                                            discuss your unique needs and how Luminous can
-                                                                                            elevate your business technology.</p>
-                                                                                        <a href="contact.html" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s">
-                                                                                            Schedule Now
-                                                                                            <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
-                                                                                        </a>
-                                                                                    </div>
-                                                                                    <div class="right wow move-out" data-wow-offset="140">
-                                                                                        <img loading="lazy" rel="preload" src="assets/images/cta/01.png" alt="">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>-->
+                                                                                            <div class="container">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-gl-12">
+                                                                                                        <div class="cta-one-wrapper">
+                                                                                                            <div class="shape-area">
+                                                                                                                <img loading="lazy" rel="preload" src="assets/images/cta/02.png" alt="cta-area">
+                                                                                                            </div>
+                                                                                                            <div class="left-area">
+                                                                                                                <h3 class="title wow fadeInUp" data-wow-delay=".1s">Book a Free Consultation</h3>
+                                                                                                                <p class="wow fadeInUp" data-wow-delay=".3s">Schedule a no-obligation consultation to
+                                                                                                                    discuss your unique needs and how Luminous can
+                                                                                                                    elevate your business technology.</p>
+                                                                                                                <a href="contact.html" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s">
+                                                                                                                    Schedule Now
+                                                                                                                    <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
+                                                                                                                </a>
+                                                                                                            </div>
+                                                                                                            <div class="right wow move-out" data-wow-offset="140">
+                                                                                                                <img loading="lazy" rel="preload" src="assets/images/cta/01.png" alt="">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>-->
 @endsection

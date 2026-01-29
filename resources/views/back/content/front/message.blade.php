@@ -53,8 +53,8 @@
                                                 <form action="{{ route('mesaj.cevapla', $msg->id) }}" method="POST">
                                                     @csrf
                                                     <div class="input-group">
-                                                        <textarea name="reply_content" class="form-control border-0 bg-transparent"
-                                                            placeholder="Cevabınızı yazın (Mail olarak gidecek)..." rows="1" style="resize: none;" required></textarea>
+                                                        <textarea name="reply_content" class="form-control border-0 bg-transparent" placeholder="Cevabınızı yazın..."
+                                                            rows="1" style="resize: none;" required></textarea>
                                                         <div class="input-group-append align-items-center ml-2">
                                                             <button type="submit"
                                                                 class="btn btn-primary rounded-pill px-4 shadow-sm">
@@ -94,5 +94,4 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
         }
     </style>
-
 @endsection
