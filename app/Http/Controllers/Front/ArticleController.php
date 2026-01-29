@@ -18,11 +18,10 @@ class ArticleController extends Controller
         $article = Article::where('slug', $slug)->firstOrFail();
         return view('front.articles.show', compact('article'));
     }
-    public function destroy($id)
+public function DeleteArticle($id)
 {
-    $article = Article::findOrFail($id); // Makaleyi bul
-    $article->delete(); // Veritabanından sil
-
+    $article = \App\Models\Article::findOrFail($id); //
+    $article->delete();
     return redirect()->back()->with('success', 'Makale başarıyla silindi! 🚀');
 }
 }

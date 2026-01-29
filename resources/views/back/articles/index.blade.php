@@ -73,12 +73,13 @@
                                             class="btn btn-sm btn-primary rounded-circle mr-1 shadow-sm">
                                             <i class="fa fa-pen"></i>
                                         </a>
-
                                         <form action="{{ route('makale.destroy', $article->id) }}" method="POST"
-                                            onsubmit="return confirm('Silmek istediğine emin misin Pelin?')">
+                                            onsubmit="return confirm('Silmek istediğine emin misin Pelin?')"
+                                            style="display: inline-block;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger rounded-circle shadow-sm">
+                                            <button type="submit" class="btn btn-sm btn-danger rounded-circle shadow-sm"
+                                                title="Sil">
                                                 <i class="fa fa-times"></i>
                                             </button>
                                         </form>

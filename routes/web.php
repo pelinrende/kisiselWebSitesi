@@ -29,8 +29,9 @@ Route::get('/article/{slug}', [ArticleController::class, 'show'])->name('article
 Route::get('/panel/makale-duzenle/{id}', [PageController::class, 'EditArticle'])->name('makale.edit');
 Route::get('/projects/edit/{id}', [PageController::class, 'EditProject'])->name('projects.edit');
 
-Route::delete('/makale/sil/{id}', [ArticleController::class, 'destroy'])->name('makale.destroy');
-Route::delete('/makale/sil/{id}', [ProjectController::class, 'destroy'])->name('project.destroy');
+
+Route::delete('/makale/silme-islemi/{id}', [ArticleController::class, 'DeleteArticle'])->name('makale.destroy');
+Route::delete('/proje/silme-islemi/{id}', [ProjectController::class, 'destroy'])->name('project.destroy');
 
 Route::put('/projects/update/{id}', [PageController::class, 'UpdateProject'])->name('projects.update');
 
