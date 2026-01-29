@@ -26,6 +26,9 @@ Route::get('/panel/makaleler', [PageController::class, 'IndexArticle'])->name('m
 Route::get('/panel/makale-yaz', [PageController::class, 'CreateArticle'])->name('makale.create');
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles');
 Route::get('/article/{slug}', [ArticleController::class, 'show'])->name('article.show');
+Route::delete('/makale/sil/{id}', [ArticleController::class, 'destroy'])->name('makale.destroy');
+Route::delete('/makale/sil/{id}', [ProjectController::class, 'destroy'])->name('project.destroy');
+
 
 
 

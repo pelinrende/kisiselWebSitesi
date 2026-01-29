@@ -3,7 +3,8 @@
 @section('title', 'Yeni Makale Oluştur')
 
 @section('content')
-    <div class="container-fluid py-5" style="background: #f8f9fc; min-height: 100vh;">
+    <div class="container-fluid py-5"
+        style="min-height: 100vh; background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(32, 1, 47, 0.85)); background-attachment: fixed;">
         <div class="row justify-content-center">
             <div class="col-lg-9">
 

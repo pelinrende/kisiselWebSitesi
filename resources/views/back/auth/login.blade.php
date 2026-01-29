@@ -11,7 +11,7 @@
 
     <style>
         body {
-            background: linear-gradient(135deg, #f8f9ff 0%, #f3e8ff 100%) !important;
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(32, 1, 47, 0.85));
             height: 100vh;
             margin: 0;
             display: flex;
@@ -27,14 +27,14 @@
         }
 
         .card {
-            border-radius: 3.5rem !important;
-            border: none !important;
-            box-shadow: 0 40px 80px rgba(78, 115, 223, 0.12) !important;
+            border-radius: 3.5rem;
+            border: none;
+            box-shadow: 0 40px 80px rgba(78, 115, 223, 0.12);
             background: #ffffff;
         }
 
         .card-body {
-            padding: 3.5rem !important;
+            padding: 3.5rem;
         }
 
         .brand-logo {
@@ -47,7 +47,7 @@
         }
 
         h1 {
-            font-weight: 900 !important;
+            font-weight: 900;
             letter-spacing: -1.5px;
             color: #1a1e2d;
             margin-bottom: 0.5rem;
@@ -61,21 +61,21 @@
         }
 
         .form-control-user {
-            border-radius: 1.5rem !important;
-            padding: 1.6rem 1.4rem !important;
-            border: 1px solid #edf2f7 !important;
-            background: #f7fafc !important;
+            border-radius: 1.5rem;
+            padding: 1.6rem 1.4rem;
+            border: 1px solid #edf2f7;
+            background: #f7fafc;
             transition: all 0.3s ease;
         }
 
         .btn-login {
-            border-radius: 1.5rem !important;
-            padding: 0.9rem !important;
-            font-weight: 900 !important;
+            border-radius: 1.5rem;
+            padding: 0.9rem;
+            font-weight: 900;
             text-transform: uppercase;
-            background: linear-gradient(to right, #4e73df, #6610f2) !important;
-            border: none !important;
-            color: white !important;
+            background: linear-gradient(to right, #4e73df, #6610f2);
+            border: none;
+            color: white;
             margin-top: 1rem;
         }
 
@@ -107,7 +107,8 @@
     </style>
 </head>
 
-<body>
+<body
+    style="background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(32, 1, 47, 0.85)); background-attachment: fixed;">
     <div class="login-container">
         <div class="card shadow-lg">
             <div class="card-body">

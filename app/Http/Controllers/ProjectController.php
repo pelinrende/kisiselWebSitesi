@@ -35,4 +35,11 @@ class ProjectController extends Controller
         $project->save();
         return redirect()->route('projects.index')->with('success', 'Proje başarıyla eklendi! ✨');
     }
+    public function destroy($id)
+{
+    $project = Project::findOrFail($id);
+    $project->delete();
+
+    return redirect()->back()->with('success', 'Makale başarıyla silindi! 🚀');
+}
 }

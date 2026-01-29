@@ -3,7 +3,8 @@
 @section('title', 'Tüm Makaleler')
 
 @section('content')
-    <div class="card shadow-sm mb-4 border-0" style="border-radius: 1.5rem;">
+    <div class="card shadow-sm mb-4 border-0"
+        style="min-height: 100vh; background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(32, 1, 47, 0.85)); background-attachment: fixed;">
         <div class="card-header py-3 bg-white d-flex justify-content-between align-items-center"
             style="border-radius: 1.5rem 1.5rem 0 0;">
             <h6 class="m-0 font-weight-bold text-primary"> @yield('title')</h6>
@@ -37,52 +38,50 @@
                     </thead>
                     <tbody>
                         @foreach ($articles as $article)
-                            @php
-
-                                $catId = $article->category_id;
-
-                                $previewImage = 'assets/images/blog/16.webp';
-
-                                if ($catId == 5) {
-                                    $previewImage = 'assets/images/banner/ai.jpg';
-                                } elseif ($catId == 3) {
-                                    $previewImage = 'assets/images/banner/motivasyon.jpg';
-                                } elseif ($catId == 1) {
-                                    $previewImage = 'assets/images/banner/error.jpg';
-                                } elseif ($catId == 4) {
-                                    $previewImage = 'assets/images/banner/letsthink.jpg';
-                                } elseif ($catId == 2) {
-                                    $previewImage = 'assets/images/banner/thedelay.png';
-                                }
-                            @endphp
                             <tr>
                                 <td>
-                                    <img src="{{ asset($previewImage) }}" class="rounded shadow-sm"
-                                        style="width: 80px; height: 50px; object-fit: cover;"
-                                        onerror="this.src='https://via.placeholder.com/80x50?text=Hata'">
+
+                                    <img src="{{ $article->image ? asset($article->image) : asset('assets/images/blog/default.webp') }}"
+                                        class="rounded shadow-sm" style="width: 80px; height: 50px; object-fit: cover;"
+                                        onerror="this.src='https://via.placeholder.com/80x50?text=Resim+Yok'">
                                 </td>
+
                                 <td class="font-weight-bold text-gray-800">{{ $article->title }}</td>
-                                <td><i class="fa fa-eye text-info mr-1"></i> {{ $article->hit ?? 0 }}</td>
-                                <td>{{ $article->created_at->diffForHumans() }}</td>
+
                                 <td>
-                                    {!! $article->status == 0
-                                        ? '<span class="badge badge-danger rounded-pill px-3"> Pasif </span>'
-                                        : '<span class="badge badge-success rounded-pill px-3"> Aktif </span>' !!}
+                                    <i class="fa fa-eye text-info mr-1"></i>
+                                    {{ $article->hit ?? 0 }}
                                 </td>
+
+                                <td>{{ $article->created_at->diffForHumans() }}</td>
+
+                                <td>
+                                    @if ($article->status == 1)
+                                        <span class="badge badge-success rounded-pill px-3">Aktif</span>
+                                    @else
+                                        <span class="badge badge-danger rounded-pill px-3">Pasif</span>
+                                    @endif
+                                </td>
+
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        {{-- Göz ikonuna basınca makalenin detay (show) sayfasına gider --}}
                                         <a href="{{ route('makale.show', $article->id) }}"
-                                            class="btn btn-sm btn-success rounded-circle mr-1">
+                                            class="btn btn-sm btn-success rounded-circle mr-1 shadow-sm">
                                             <i class="fa fa-eye"></i>
                                         </a>
-                                        {{-- Kalem ikonuna basınca az önce yaptığımız estetik düzenleme sayfasına gider --}}
                                         <a href="{{ route('makale.edit', $article->id) }}"
-                                            class="btn btn-sm btn-primary rounded-circle mr-1">
+                                            class="btn btn-sm btn-primary rounded-circle mr-1 shadow-sm">
                                             <i class="fa fa-pen"></i>
                                         </a>
-                                        <a href="#" class="btn btn-sm btn-danger rounded-circle"><i
-                                                class="fa fa-times"></i></a>
+
+                                        <form action="{{ route('makale.destroy', $article->id) }}" method="POST"
+                                            onsubmit="return confirm('Silmek istediğine emin misin Pelin?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger rounded-circle shadow-sm">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>

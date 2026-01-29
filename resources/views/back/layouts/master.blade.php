@@ -20,11 +20,7 @@
                 </div>
             </div>
 
-            <footer class="sticky-footer bg-white py-3 mt-5">
-                <div class="container my-auto text-center">
-                    <span>Copyright &copy; Pelin {{ date('Y') }}</span>
-                </div>
-            </footer>
+
         </div>
     </div>
 
