@@ -45,35 +45,38 @@
             </div>
         </div>
     </header>
-
-    <header class="header-style-one header--sticky"
+    <!--    <header class="header-style-one header--sticky"
         style="z-index: 1000; position: fixed; background: #3e0e6b; top: 0; width: 100%;">
-        <div class="container-fluid" style="padding: 0 40px;">
+        <div class="container-fluid" style="padding: 0 10px;">
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <div class="header-wrapper-1"
-                        style="display: flex; justify-content: space-between; align-items: center; min-height: 90px; position: relative;">
+                        style="display: flex; align-items: center; justify-content: space-between; min-height: 100px; width: 100%;">
 
                         <a href="{{ route('webanasayfa') }}" class="logo-area" style="z-index: 10;">
                             <img src="{{ asset('assets/images/logo/logom.png') }}" alt="logo"
-                                style="width: 500px; height: auto; border-radius: 50%;">
+                                style="width: 100%; height: auto; border-radius: 50%; display: block;">
                         </a>
 
-                        <div class="nav-area"
-                            style="position: absolute; left: 50%; transform: translateX(-50%); z-index: 5;">
+                        <div style="flex: 0 0 55%; padding: 0 5px;">
                             <nav>
                                 <ul
-                                    style="display: flex; gap: 40px; list-style: none; margin: 0; padding: 0; white-space: nowrap;">
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
-                                            href="{{ route('webanasayfa') }}">HomePage</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
-                                            href="{{ route('hakkimda') }}">About</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
-                                            href="{{ route('iletisim') }}">Contact</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600; color: white;"
-                                            href="{{ route('projeler') }}">Projects</a></li>
-                                    <li><a class="nav-link" style="font-size: 18px; font-weight: 600;color: white;"
-                                            href="{{ route('makaleler') }}">Articles</a></li>
+                                    style="display: flex; justify-content: space-evenly; align-items: center; list-style: none; margin: 0; padding: 0; gap: 5px;">
+                                    <li><a href="{{ route('webanasayfa') }}"
+                                            style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">HomePage</a>
+                                    </li>
+                                    <li><a href="{{ route('hakkimda') }}"
+                                            style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">About</a>
+                                    </li>
+                                    <li><a href="{{ route('iletisim') }}"
+                                            style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Contact</a>
+                                    </li>
+                                    <li><a href="{{ route('projeler') }}"
+                                            style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Projects</a>
+                                    </li>
+                                    <li><a href="{{ route('makaleler') }}"
+                                            style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Articles</a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -89,3 +92,4 @@
             </div>
         </div>
     </header>
+-->
