@@ -166,13 +166,13 @@ public function CreateArticle()
     }
     public function StoreArticle(Request $request)
 {
-    // ... validate kısmı aynı kalsın
+
     Article::create([
         'title' => $request->title,
         'category_id' => $request->category_id,
         'content' => $request->content,
         'slug' => Str::slug($request->title),
-        'status' => 1, // Bunu ekle ki makale doğrudan aktif olsun!
+        'status' => 1,
         'image' => null
     ]);
     return redirect()->route('makale.index')->with('success', '✨ Makalen yayınlandı!');

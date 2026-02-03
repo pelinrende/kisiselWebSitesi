@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Luminos - IT solutions for a growing businesses.">
+    <meta name="description" content="PR">
     <title>@yield('webtitle')|Pelin Rende</title>
     <link rel="stylesheet preload" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}" as="style" media="print"
         onload="this.media='all'">

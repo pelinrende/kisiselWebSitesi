@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-    // 1. Önce Kategorilerini Oluştur (İstediğin isimlerle)
+
     $categories = [
         ['name' => 'Thedelay', 'slug' => 'thedelay'],
         ['name' => 'Error', 'slug' => 'error'],

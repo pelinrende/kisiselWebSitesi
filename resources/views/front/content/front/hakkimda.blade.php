@@ -15,14 +15,14 @@
                     <div class="single-team-content">
                         <h1 class="title wow fadeInUp" data-wow-delay=".1s">Pelin Rende
                         </h1>
-                        <p class="wow fadeInUp" data-wow-delay=".3s">Pelin is a fourth-year Software Engineering student at
-                            Doğuş University with a strong foundation in C#, Python, HTML, and CSS. With a deep interest in
-                            building reliable and well-structured software solutions, she focuses on transforming
-                            theoretical knowledge into practical, real-world applications.
-                            Driven by a passion for continuous learning and problem-solving, Pelin writes in-depth technical
-                            articles and develops projects that reflect both analytical thinking and clean coding practices.
-                            Through her work, she aims to support others in their learning journey while steadily growing as
-                            a software engineer.</p>
+                        <p class="wow fadeInUp" data-wow-delay=".3s">Pelin, Doğuş Üniversitesi Yazılım Mühendisliği
+                            bölümünde dördüncü sınıf öğrencisi olup C#, Python, HTML ve CSS dillerinde güçlü bir temele
+                            sahiptir. Güvenilir ve iyi yapılandırılmış yazılım çözümleri geliştirmeye derin bir ilgi duyan
+                            Pelin, teorik bilgiyi pratik, gerçek dünya uygulamalarına dönüştürmeye odaklanmaktadır. Sürekli
+                            öğrenme ve problem çözme tutkusuyla hareket eden Pelin, derinlemesine teknik makaleler yazmakta
+                            ve hem analitik düşünmeyi hem de temiz kodlama uygulamalarını yansıtan projeler
+                            geliştirmektedir. Çalışmalarıyla, bir yazılım mühendisi olarak istikrarlı bir şekilde gelişirken
+                            başkalarının öğrenme yolculuklarında onlara destek olmayı amaçlamaktadır.</p>
                         <div class="social-area-wrapper wow fadeInUp" data-wow-delay=".7s">
                             <p>Follow Me:</p>
                             <div class="social-one-area">

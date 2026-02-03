@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Yeni Hesap Oluştur | Pelin Kreatif Panel</title>
-    {{-- İkonların görünmesi için FontAwesome 6 linkini ekledim --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,900" rel="stylesheet">
     <link href="{{ asset('back/css/sb-admin-2.min.css') }}" rel="stylesheet">
