@@ -16,8 +16,9 @@
                         <h1 class="title wow fadeInUp" data-wow-delay=".1s">Pelin Rende
                         </h1>
                         <p class="wow fadeInUp" data-wow-delay=".3s">Pelin, Doğuş Üniversitesi Yazılım Mühendisliği
-                            bölümünde dördüncü sınıf öğrencisi olup C#, Python, HTML ve CSS dillerinde güçlü bir temele
-                            sahiptir. Güvenilir ve iyi yapılandırılmış yazılım çözümleri geliştirmeye derin bir ilgi duyan
+                            mezunuyum.
+                            C#, Python, HTML ve CSS dillerinde güçlü bir temele
+                            sahiptir . Güvenilir ve iyi yapılandırılmış yazılım çözümleri geliştirmeye derin bir ilgi duyan
                             Pelin, teorik bilgiyi pratik, gerçek dünya uygulamalarına dönüştürmeye odaklanmaktadır. Sürekli
                             öğrenme ve problem çözme tutkusuyla hareket eden Pelin, derinlemesine teknik makaleler yazmakta
                             ve hem analitik düşünmeyi hem de temiz kodlama uygulamalarını yansıtan projeler
@@ -29,7 +30,7 @@
                                 <ul>
                                     <li><a href="https://www.instagram.com/pelinrende_/"><i
                                                 class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+
                                     <li><a href="https://github.com/pelinrende"><i class="fa-brands fa-github"></i></a></li>
                                     <li><a
                                             href="https://www.linkedin.com/in/pelin-rende-569566314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i

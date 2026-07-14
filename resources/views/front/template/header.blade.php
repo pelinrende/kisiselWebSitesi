@@ -17,19 +17,19 @@
                         <ul
                             style="display: flex; justify-content: space-evenly; align-items: center; list-style: none; margin: 0; padding: 0; gap: 5px;">
                             <li><a href="{{ route('webanasayfa') }}"
-                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">HomePage</a>
+                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">AnaSayfa</a>
                             </li>
                             <li><a href="{{ route('hakkimda') }}"
-                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">About</a>
-                            </li>
-                            <li><a href="{{ route('iletisim') }}"
-                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Contact</a>
+                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Hakkımda</a>
                             </li>
                             <li><a href="{{ route('projeler') }}"
-                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Projects</a>
+                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Projelerim</a>
                             </li>
                             <li><a href="{{ route('makaleler') }}"
-                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Articles</a>
+                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">Makaleler</a>
+                            </li>
+                            <li><a href="{{ route('iletisim') }}"
+                                    style="color: white; font-weight: 600; text-decoration: none; font-size: clamp(9px, 1.8vw, 16px); white-space: nowrap;">İletişim</a>
                             </li>
                         </ul>
                     </nav>
@@ -38,7 +38,7 @@
                 <div style="flex: 0 0 25%; text-align: right;">
                     <a href="{{ route('mesaj.sayfasi') }}"
                         style="display: inline-block; padding: 6px 8px; border: 1.5px solid white; border-radius: 4px; color: white; font-weight: 700; text-decoration: none; font-size: clamp(8px, 1.6vw, 14px); white-space: nowrap;">
-                        Get in touch
+                        Benimle iletişime geç
                     </a>
                 </div>
 

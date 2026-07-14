@@ -6,11 +6,11 @@
             <div class="row d-flex align-items-center">
                 <div class="col-lg-7 mb_md--30 mb_sm--30">
                     <div class="service-banner-content-wrapper">
-                        <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s">Let's take a look at my
-                            projects together</h1>
+                        <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s">Hadi projelerime birlikte
+                            bir göz atalım.</h1>
                         <p class="disc wow fadeInUp" data-wow-offset="120" data-wow-delay=".6s">
-                            These projects were built for learning purposes and personal development, and have not been
-                            deployed in production environments.
+                            Bu projeler öğrenme ve kişisel gelişim amacıyla oluşturulmuş olup canlı ortamlarda devreye
+                            alınmamıştır.
                         </p>
                     </div>
                 </div>
@@ -66,11 +66,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="get-quote-area-service-wrapper">
-                        <h3 class="title">Have questions?</h3>
-                        <p>Call us +90 534 365 6222 or click the button below to get in touch</p>
+                        <h3 class="title">Sorularınız mı var?</h3>
+                        <p>İletişime geçmek için bizi +90 534 365 6222 numarasından arayın veya aşağıdaki butona tıklayın.
+                        </p>
                         <a href="{{ route('mesaj.sayfasi') }}" class="rts-btn btn-primary wow fadeInUp"
                             data-wow-delay=".5s">
-                            Contact sales
+                            Mesaj Gönder
                             <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
                         </a>
                     </div>

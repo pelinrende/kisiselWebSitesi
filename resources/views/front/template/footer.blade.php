@@ -10,11 +10,12 @@
                         </a>
                     </div>
                     <div class="footer-text-info">
-                        <p class="disc">a software engineering student's blog</p>
+                        <p class="disc">Bir Yazılım Mühendisinin Bloğu</p>
                     </div>
                 </div>
                 <p style="color: #94a3b8; margin-top: 20px; max-width: 400px; font-size: 14px;">
-                    Yazılım mühendisliği sürecindeki deneyimlerimi ve projelerimi paylaştığım kişisel portfolyo sitem.
+                    Yazılım mühendisliği sürecindeki deneyimlerimi ve projelerimi paylaştığım kişisel portfolyo
+                    sistemim.
                 </p>
             </div>
             <div class="col-lg-3 col-md-6 mt_sm--30">
@@ -48,7 +49,7 @@
                 </p>
                 <p style="color: #94a3b8; font-size: 14px;">
                     <a href="{{ route('dashboard') }}" style="margin-right: 10px;">
-                        Admin Paneli </a>
+                        Panel</a>
                 </p>
             </div>
         </div>
@@ -86,17 +87,12 @@
     <div class="loader-section section-right"></div>
 </div>
 
-<!-- rtl btn area start -->
-<div class="rtl-ltr-switcher-btn">
-    <span class="rtl show">View RTL</span>
-    <span class="ltr">View LTR</span>
-</div>
-<!-- rtl btn area end -->
+
 
 <div id="side-bar" class="side-bar header-two" dir="ltr">
     <button class="close-icon-menu" aria-label="footer_Button"><i class="far fa-times"></i></button>
     <div class="mobile-menu-main">
-        <nav class="nav-main mainmenu-nav mt--30">
+        <nav class="nav-main mainmenu-nav">
             <ul class="mainmenu metismenu" id="mobile-menu-active">
                 <li class="has-droupdown">
                     <a href="#" class="main">Home</a>
@@ -169,7 +165,7 @@
         </nav>
 
 
-        <div class="rts-social-border-area right-sidebar mt--80">
+        <div class="rts-social-border-area right-sidebar">
             <ul>
                 <li><a href="#" aria-label="social link" data-description="social"><i
                             class="fa-brands fa-facebook-f"></i></a></li>

@@ -24,7 +24,7 @@ class AuthenticatedSessionController extends Controller
         //Laravel veritabanındaki e-posta ve şifreyi otomatik kontrol eder
         $request->authenticate();
 
-        //Oturumu yeniler (Güvenlik için)
+        //Oturumu yeniler
         $request->session()->regenerate();
 
         //Dashboard'a gönderece

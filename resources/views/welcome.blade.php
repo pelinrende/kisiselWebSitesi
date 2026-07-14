@@ -17,17 +17,17 @@
 
                         <h1 class="title wow fadeInUp" data-wow-delay=".2s">
 
-                            <span>Learning as I write, growing as I build.</span>
+                            <span>Yazarken öğreniyor, inşa ederken gelişiyorum.</span>
 
                         </h1>
 
-                        <p class="wow fadeInUp" data-wow-delay=".5s">A software engineering student’s blog about code,
+                        <p class="wow fadeInUp" data-wow-delay=".5s">Bir yazılım mühendisinin kod,
 
-                            projects, and continuous learning.</p>
+                            projeler ve sürekli öğrenme üzerine bloğu.</p>
 
                         <a href="{{ route('makaleler') }}" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".7s">
 
-                            View Articles
+                            Makaleleri Görüntüle
 
                         </a>
 
@@ -107,9 +107,8 @@
 
                         <p class="disc">
 
-                            I write in-depth articles on software engineering, share real project experiences, and help
-
-                            others grow through clear, practical insights. <br></br>
+                            Yazılım mühendisliği üzerine kapsamlı makaleler yazıyor, gerçek proje deneyimlerimi paylaşıyor
+                            ve net, pratik içgörülerle başkalarının gelişimine katkıda bulunuyorum. <br></br>
 
                         </p>
 
@@ -138,20 +137,29 @@
 
                     <div class="large-video-bottom">
 
-                        <h2 class="title wow fadeInUp" data-wow-delay=".1s">Why not explore my articles?</h2>
+                        <h2 class="title wow fadeInUp" data-wow-delay=".1s">Neden makalelerimi keşfetmiyorsun?</h2>
 
                         <p class="disc wow fadeInUp" data-wow-delay=".4s">
 
-                            A step towards the future: I share the analytical logic of code to inspire and empower other
 
-                            developers.
+                            Geleceğe doğru bir adım: Diğer geliştiricilere ilham vermek ve onları güçlendirmek için kodun
+                            analitik mantığını paylaşıyorum.
 
                         </p>
 
                         <a href="{{ route('makaleler') }}" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s"
                             style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
 
-                            View Article
+                            Makaleleri Görüntüle
+
+                            <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
+
+                        </a>
+                        <br>
+                        <a href="{{ route('projeler') }}" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".5s"
+                            style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+
+                            Projelerimi Görüntüle
 
                             <img class="injectable" src="assets/images/service/icons/13.svg" alt="arrow">
 
