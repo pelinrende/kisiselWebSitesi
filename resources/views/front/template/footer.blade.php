@@ -47,10 +47,10 @@
                         class="fa-solid fa-location-dot" style="margin-right: 10px;">
                         Antakya/Türkiye </a>
                 </p>
-                <p style="color: #94a3b8; font-size: 14px;">
+                <!-- <p style="color: #94a3b8; font-size: 14px;">
                     <a href="{{ route('dashboard') }}" style="margin-right: 10px;">
                         Panel</a>
-                </p>
+                </p>-->
             </div>
         </div>
     </div>

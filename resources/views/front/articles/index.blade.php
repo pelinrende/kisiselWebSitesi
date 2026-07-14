@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="career-page-single-banner blog-page">
-                        <h1 class="title">My Articles</h1>
+                        <h1 class="title">Makalelerim</h1>
                     </div>
                 </div>
             </div>
