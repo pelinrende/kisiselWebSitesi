@@ -166,26 +166,41 @@ public function CreateArticle()
     }
     public function StoreArticle(Request $request)
 {
-
-    Article::create([
-        'title' => $request->title,
-        'category_id' => $request->category_id,
-        'content' => $request->content,
-        'slug' => Str::slug($request->title),
-        'status' => 1,
+    $validated = $request->validate([
+        'title' => ['required', 'string', 'max:255'],
+        'category_id' => ['required', 'exists:categories,id'],
+        'content' => ['required', 'string'],
         'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
     ]);
+
+    $imagePath = null;
+
     if ($request->hasFile('image')) {
-        $imageName = time() . '.' . $request->file('image')->extension();
+        $uploadPath = public_path('uploads/articles');
 
-        $request->file('image')->move(
-            public_path('uploads/articles'),
-            $imageName
-        );
+        if (! file_exists($uploadPath)) {
+            mkdir($uploadPath, 0755, true);
+        }
 
-        $validated['image'] = 'uploads/articles/' . $imageName;
+        $imageName = time() . '_' . uniqid() . '.' . $request->file('image')->extension();
+
+        $request->file('image')->move($uploadPath, $imageName);
+
+        $imagePath = 'uploads/articles/' . $imageName;
     }
-    return redirect()->route('makale.index')->with('success', '✨ Makalen yayınlandı!');
+
+    Article::create([
+        'title' => $validated['title'],
+        'category_id' => $validated['category_id'],
+        'content' => $validated['content'],
+        'slug' => Str::slug($validated['title']),
+        'status' => 1,
+        'image' => $imagePath,
+    ]);
+
+    return redirect()
+        ->route('makale.index')
+        ->with('success', '✨ Makalen yayınlandı!');
 }
 
 
