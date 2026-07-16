@@ -170,19 +170,36 @@ public function CreateArticle()
         'title' => ['required', 'string', 'max:255'],
         'category_id' => ['required', 'exists:categories,id'],
         'content' => ['required', 'string'],
-        'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
+        'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
     ]);
+
+    // Aynı başlık tekrar kullanılırsa slug çakışmasını engeller.
+    $baseSlug = Str::slug($validated['title']);
+    $slug = $baseSlug;
+    $counter = 1;
+
+    while (Article::where('slug', $slug)->exists()) {
+        $slug = $baseSlug . '-' . $counter;
+        $counter++;
+    }
 
     $imagePath = null;
 
     if ($request->hasFile('image')) {
-        $uploadPath = public_path('uploads/articles');
+        // Sitenin erişebildiği public_html/uploads/articles konumu
+        $uploadPath = base_path('uploads/articles');
 
-        if (! file_exists($uploadPath)) {
+        if (! is_dir($uploadPath)) {
             mkdir($uploadPath, 0755, true);
         }
 
-        $imageName = time() . '_' . uniqid() . '.' . $request->file('image')->extension();
+        $extension = $request->file('image')->getClientOriginalExtension();
+
+        $imageName = time()
+            . '_'
+            . uniqid()
+            . '.'
+            . strtolower($extension);
 
         $request->file('image')->move($uploadPath, $imageName);
 
@@ -193,14 +210,15 @@ public function CreateArticle()
         'title' => $validated['title'],
         'category_id' => $validated['category_id'],
         'content' => $validated['content'],
-        'slug' => Str::slug($validated['title']),
+        'slug' => $slug,
         'status' => 1,
+        'hit' => 0,
         'image' => $imagePath,
     ]);
 
     return redirect()
         ->route('makale.index')
-        ->with('success', '✨ Makalen yayınlandı!');
+        ->with('success', 'Makalen başarıyla yayınlandı.');
 }
 
 
