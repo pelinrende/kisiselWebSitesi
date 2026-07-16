@@ -173,8 +173,18 @@ public function CreateArticle()
         'content' => $request->content,
         'slug' => Str::slug($request->title),
         'status' => 1,
-        'image' => null
+        'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
     ]);
+    if ($request->hasFile('image')) {
+        $imageName = time() . '.' . $request->file('image')->extension();
+
+        $request->file('image')->move(
+            public_path('uploads/articles'),
+            $imageName
+        );
+
+        $validated['image'] = 'uploads/articles/' . $imageName;
+    }
     return redirect()->route('makale.index')->with('success', '✨ Makalen yayınlandı!');
 }
 

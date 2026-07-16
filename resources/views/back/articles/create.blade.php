@@ -43,6 +43,18 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group mb-4">
+                                    <label class="font-weight-bold text-dark ml-2">Makale Görseli</label>
+
+                                    <input type="file" name="image" class="form-control border-0 shadow-sm bg-light"
+                                        accept="image/jpeg,image/png,image/webp"
+                                        style="border-radius: 1rem; padding: 0.8rem;">
+
+                                    @error('image')
+                                        <small class="text-danger ml-2">{{ $message }}</small>
+                                    @enderror
+                                </div>
+
 
                             </div>
 
