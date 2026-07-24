@@ -1,21 +1,266 @@
-.nav-link {
-    color: #ffffff ;
-    transition: opacity 0.3s ease;
+:root {
+    --nav-ink: #151218;
+    --nav-paper: rgba(255, 255, 255, 0.96);
+    --nav-accent: #8b2aa7;
+    --nav-accent-dark: #64117f;
+    --nav-active: #f1e7f5;
 }
 
-
-.nav-link:hover {
-    color: #ffffff;
-    opacity: 0.8;
+.chello-header,
+.chello-header * {
+    box-sizing: border-box;
 }
 
-.button-area-right-header a {
-    color: #ffffff ;
-    border-color: #ffffff ;
+.chello-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 18px clamp(18px, 4vw, 64px);
+    background: #fbf8fc;
+    border-bottom: 0;
 }
 
+.chello-header__inner {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(18px, 3vw, 42px);
+    width: min(100%, 1440px);
+    margin: 0 auto;
+}
 
-.button-area-right-header a:hover {
-    background-color: #ffffff;
-    color: #3e0e6b ;
+.chello-logo {
+    position: relative;
+    display: block;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #130d18;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.chello-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(4.25);
+    display: block;
+}
+
+.chello-nav {
+    justify-self: center;
+    min-width: 0;
+}
+
+.chello-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+    border-radius: 999px;
+    background: var(--nav-paper);
+    box-shadow: 0 12px 35px rgba(18, 10, 23, 0.18);
+}
+
+.chello-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 clamp(13px, 1.5vw, 22px);
+    border-radius: 999px;
+    color: var(--nav-ink);
+    font-size: clamp(13px, 1.1vw, 16px);
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.chello-nav a:hover,
+.chello-nav a:focus-visible {
+    color: var(--nav-accent-dark);
+    background: #f7f1f9;
+}
+
+.chello-nav a.is-active {
+    color: var(--nav-accent-dark);
+    background: var(--nav-active);
+}
+
+.chello-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 22px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: var(--nav-accent);
+    box-shadow: 0 12px 28px rgba(112, 24, 139, 0.3);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.chello-contact:hover,
+.chello-contact:focus-visible {
+    color: #fff;
+    background: var(--nav-accent-dark);
+    box-shadow: 0 15px 34px rgba(112, 24, 139, 0.4);
+    transform: translateY(-2px);
+}
+
+.chello-contact span {
+    font-size: 17px;
+}
+
+.chello-menu-toggle {
+    display: none;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--nav-paper);
+    cursor: pointer;
+}
+
+.chello-menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    background: var(--nav-ink);
+    transition: transform 180ms ease;
+}
+
+@media (max-width: 1120px) {
+    .chello-header__inner {
+        grid-template-columns: 64px minmax(0, 1fr) auto;
+        gap: 16px;
+    }
+
+    .chello-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .chello-nav a {
+        padding-inline: 12px;
+        font-size: 13px;
+    }
+
+    .chello-contact {
+        min-height: 48px;
+        padding-inline: 17px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .chello-header {
+        padding: 12px 18px;
+    }
+
+    .chello-header__inner {
+        grid-template-columns: 58px 1fr 48px;
+    }
+
+    .chello-contact {
+        justify-self: end;
+    }
+
+    .chello-menu-toggle {
+        display: block;
+        grid-column: 3;
+    }
+
+    .chello-contact {
+        display: none;
+    }
+
+    .chello-nav {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 18px;
+        left: 18px;
+        display: grid;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+    }
+
+    .chello-nav ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 2px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 24px;
+    }
+
+    .chello-nav a {
+        min-height: 48px;
+        padding-inline: 18px;
+        font-size: 15px;
+    }
+
+    .menu-is-open .chello-nav {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu-is-open .chello-menu-toggle span:first-child {
+        transform: translateY(3.5px) rotate(45deg);
+    }
+
+    .menu-is-open .chello-menu-toggle span:last-child {
+        transform: translateY(-3.5px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .chello-header {
+        padding-inline: 14px;
+    }
+
+    .chello-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .chello-header__inner {
+        grid-template-columns: 52px 1fr 46px;
+    }
+
+    .chello-menu-toggle {
+        width: 46px;
+        height: 46px;
+    }
+
+    .chello-nav {
+        right: 14px;
+        left: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chello-nav,
+    .chello-nav a,
+    .chello-contact,
+    .chello-menu-toggle span {
+        transition: none;
+    }
 }

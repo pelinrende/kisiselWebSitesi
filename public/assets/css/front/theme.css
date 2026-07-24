@@ -1,0 +1,362 @@
+:root {
+    --pr-purple-950: #24072f;
+    --pr-purple-900: #351043;
+    --pr-purple-800: #4e1762;
+    --pr-purple-700: #6f2387;
+    --pr-purple-600: #8b2aa7;
+    --pr-purple-500: #a34fbd;
+    --pr-purple-300: #d7afe2;
+    --pr-purple-200: #ead8ef;
+    --pr-purple-100: #f5edf7;
+    --pr-purple-50: #fbf8fc;
+    --pr-ink: #2e2033;
+    --pr-muted: #746579;
+    --pr-white: #ffffff;
+    --pr-shadow: 0 20px 50px rgba(78, 23, 98, 0.12);
+}
+
+html {
+    accent-color: var(--pr-purple-600);
+}
+
+body {
+    color: var(--pr-ink);
+    background: var(--pr-purple-50);
+}
+
+::selection {
+    color: var(--pr-white);
+    background: var(--pr-purple-600);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+    color: var(--pr-purple-950);
+}
+
+p,
+.disc {
+    color: var(--pr-muted);
+}
+
+a {
+    color: var(--pr-purple-700);
+}
+
+a:hover {
+    color: var(--pr-purple-600);
+}
+
+.rts-banner-area-start,
+.team-single-banner-area,
+.rts-service-banner-area,
+.career-single-banner-area,
+.rts-blog-area,
+.alrge-video-area,
+.have-you-any-questions-area-service {
+    background-color: var(--pr-purple-50);
+}
+
+.rts-banner-area-start {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(163, 79, 189, 0.14), transparent 30%),
+        var(--pr-purple-50);
+}
+
+.banner-wrapper-one .title span {
+    color: var(--pr-purple-950);
+}
+
+.title-video-top,
+.large-video-bottom,
+.single-team-content,
+.service-banner-content-wrapper {
+    color: var(--pr-ink);
+}
+
+.rts-btn.btn-primary,
+.send-btn,
+button[type="submit"] {
+    border-color: var(--pr-purple-600) !important;
+    background: linear-gradient(135deg, var(--pr-purple-600), var(--pr-purple-800)) !important;
+    color: var(--pr-white) !important;
+    box-shadow: 0 12px 28px rgba(111, 35, 135, 0.24) !important;
+}
+
+.rts-btn.btn-primary:hover,
+.rts-btn.btn-primary:focus-visible,
+.send-btn:hover,
+.send-btn:focus-visible,
+button[type="submit"]:hover,
+button[type="submit"]:focus-visible {
+    border-color: var(--pr-purple-950) !important;
+    background: var(--pr-purple-950) !important;
+    color: var(--pr-white) !important;
+}
+
+.rts-btn.btn-primary img,
+.rts-btn.btn-primary svg {
+    filter: brightness(0) invert(1);
+}
+
+.btn-outline-secondary {
+    border-color: var(--pr-purple-600) !important;
+    color: var(--pr-purple-700) !important;
+}
+
+.btn-outline-secondary:hover {
+    border-color: var(--pr-purple-700) !important;
+    background: var(--pr-purple-700) !important;
+    color: var(--pr-white) !important;
+}
+
+.badge-primary,
+.badge.bg-primary {
+    background: var(--pr-purple-600) !important;
+    color: var(--pr-white) !important;
+}
+
+.text-muted {
+    color: var(--pr-muted) !important;
+}
+
+.single-service-list,
+.single-blog-area-start,
+.content.shadow-sm,
+.message-card,
+.iletisim-kart {
+    border: 1px solid var(--pr-purple-200) !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    box-shadow: var(--pr-shadow) !important;
+}
+
+.single-service-list {
+    width: min(calc(100% - 48px), 1320px);
+    margin: 0 auto 22px;
+    border-radius: 28px;
+    overflow: hidden;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.single-service-list .icon {
+    flex: 0 0 168px;
+    width: 168px !important;
+    height: 118px !important;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--pr-purple-100) !important;
+}
+
+.single-service-list .icon img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+.single-service-list .main-information-area {
+    flex: 1;
+    min-width: 0;
+    padding-inline: clamp(18px, 3vw, 44px);
+}
+
+.single-service-list:hover {
+    border-color: var(--pr-purple-300) !important;
+    box-shadow: 0 24px 55px rgba(78, 23, 98, 0.18) !important;
+    transform: translateY(-3px);
+}
+
+.single-service-list .arrow-btn,
+.social-one-area a {
+    border-color: var(--pr-purple-200) !important;
+    background: var(--pr-purple-100) !important;
+    color: var(--pr-purple-700) !important;
+}
+
+.single-service-list .arrow-btn:hover,
+.social-one-area a:hover {
+    background: var(--pr-purple-700) !important;
+    color: var(--pr-white) !important;
+}
+
+.single-blog-area-start .top-area > span,
+.single-blog-area-start .author-area-info span {
+    color: var(--pr-purple-600) !important;
+}
+
+.single-blog-area-start .thumbnail img,
+.banner-thumbnail img,
+.thumbnail-bannr-service-right img,
+.right-clippath-wrapper img,
+.content + img {
+    border-color: var(--pr-purple-200);
+}
+
+.get-quote-area-service-wrapper {
+    border: 1px solid var(--pr-purple-200);
+    background:
+        radial-gradient(circle at 90% 10%, rgba(163, 79, 189, 0.18), transparent 32%),
+        var(--pr-purple-100) !important;
+}
+
+.contact-area,
+.container-fluid:has(.message-section) {
+    background:
+        linear-gradient(rgba(245, 237, 247, 0.9), rgba(78, 23, 98, 0.86)),
+        var(--pr-purple-100) !important;
+}
+
+.iletisim-kart h1,
+.message-card h2 {
+    color: var(--pr-purple-950) !important;
+}
+
+.iletisim-kart .etiket {
+    color: var(--pr-purple-700) !important;
+}
+
+.iletisim-kart td {
+    border-bottom-color: var(--pr-purple-200) !important;
+}
+
+.iletisim-kart .icerik a,
+.donus-linki {
+    color: var(--pr-purple-800) !important;
+}
+
+.iletisim-kart .icerik a:hover,
+.donus-linki:hover {
+    color: var(--pr-purple-500) !important;
+    text-shadow: none !important;
+}
+
+.message-card p {
+    color: var(--pr-purple-600) !important;
+}
+
+.custom-input,
+input,
+textarea,
+select {
+    border-color: var(--pr-purple-200) !important;
+    background: var(--pr-white) !important;
+    color: var(--pr-ink) !important;
+}
+
+.custom-input:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--pr-purple-600) !important;
+    box-shadow: 0 0 0 4px rgba(139, 42, 167, 0.12) !important;
+    outline: none;
+}
+
+.rts-footer-area,
+.rts-copyright-area-one {
+    background: var(--pr-purple-950) !important;
+}
+
+.rts-footer-area {
+    border-top-color: rgba(234, 216, 239, 0.14) !important;
+}
+
+.rts-footer-area::before {
+    background: radial-gradient(circle at top right, rgba(163, 79, 189, 0.28), transparent 420px) !important;
+}
+
+.footer-title,
+.footer-text-info .disc {
+    color: var(--pr-white) !important;
+}
+
+.footer-logo-content {
+    align-items: center;
+}
+
+.footer-logo-content > a.logo-area {
+    display: block !important;
+    flex: 0 0 190px;
+    width: 190px;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--pr-purple-950);
+}
+
+#ozel-yuvarlak-logo {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    object-fit: cover;
+    transform: scale(4.25);
+}
+
+#ozel-yuvarlak-logo:hover {
+    transform: scale(4.25) !important;
+}
+
+.rts-footer-area p,
+.rts-footer-area a,
+.rts-copyright-area-one p,
+.rts-copyright-area-one a {
+    color: var(--pr-purple-300) !important;
+}
+
+.footer-links li a:hover,
+.rts-footer-area a:hover,
+.rts-copyright-area-one a:hover {
+    color: var(--pr-white) !important;
+}
+
+.progress-wrap {
+    border-color: var(--pr-purple-300) !important;
+    background: var(--pr-white) !important;
+}
+
+.progress-wrap svg path {
+    stroke: var(--pr-purple-600) !important;
+}
+
+@media (max-width: 767px) {
+    .single-service-list,
+    .single-blog-area-start,
+    .iletisim-kart,
+    .message-card {
+        box-shadow: 0 14px 34px rgba(78, 23, 98, 0.11) !important;
+    }
+
+    .single-service-list {
+        width: min(calc(100% - 28px), 1320px);
+    }
+
+    .single-service-list .icon {
+        width: 100% !important;
+        height: 210px !important;
+        flex-basis: auto;
+    }
+
+    .single-service-list .main-information-area {
+        padding-inline: 0;
+    }
+
+    .footer-logo-content > a.logo-area {
+        flex-basis: 150px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .single-service-list {
+        transition: none;
+    }
+}

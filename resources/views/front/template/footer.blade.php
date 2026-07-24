@@ -10,6 +10,7 @@
                         </a>
                     </div>
                     <div class="footer-text-info">
+                        <br>
                         <p class="disc">Bir Yazılım Mühendisinin Bloğu</p>
                     </div>
                 </div>
